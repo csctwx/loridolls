@@ -1,0 +1,212 @@
+<?php
+function myfunctionlib_theme_path($path){
+	return base_path() . drupal_get_path('theme', 'terra') . '/' . $path;
+} 
+
+function myfunctionlib_get_fields($content){
+    $fields = '';
+    if($content){
+    	foreach ($content as $field => $value) {
+    		$field_name = '';
+    		$field_label = '';
+            $field_value ='';
+            $field_path ='';
+    		if(isset($value['#title'])){
+    			$field_label = $value['#title'];
+    		}    		
+    		if(substr($field, 0, 6) == 'field_'){
+    			$field_name = substr($field, 6);
+    			if ($value['#field_type'] == 'text') {
+    				
+                    if(($field_name == 'natural_habitat') 
+                      || ($field_name == 'includes')){
+                        $field_value = $value['#items'];
+                    }
+                    else{
+                        $field_value = $value['#items'][0]['value'];
+                    }
+
+                    $fields[$field_name] = $field_value;
+    				
+    			}
+    			elseif (($value['#field_type'] == 'image') 
+                        || ($value['#field_type'] == 'file')) {
+                    for ($i=0; $i < count($value['#items']); $i++) { 
+                        $field_value[$i] = $value['#items'][$i]['uri'];
+                        //$field_path[$i] = file_create_url($field_value[$i]);
+                        $field_path[$i] = array(
+                            'picture_url'=>file_create_url($field_value[$i]),
+                            'thumbnail_url'=>image_style_url("thumbnail", $field_value[$i])
+                            );
+                    }
+    				
+    			}
+    		}
+    		elseif ($field == 'body') {
+    			$field_name = 'descriptive_text';
+    			$field_value = $value['#items'][0]['safe_value'];
+    		}
+
+    		if ($field_name) {
+    			$fields[$field_name] = array('label'=>$field_label, 
+                                             'value'=>$field_value, 
+                                             'url'=>$field_path);
+    		}    		
+    	}
+    }
+
+    return $fields;
+}
+
+function myfunctionlib_get_nodes($title){
+    $type = str_replace(' ', '_', strtolower($title));
+    
+    $nids = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->condition('type', $type, '=')
+    ->execute()
+    ->fetchCol();
+
+    // Get all of the article nodes.
+    $node_arr = node_load_multiple($nids);
+
+    $nodes = null;
+    foreach ($node_arr as $node_obj) {        
+        $img_url = $node_obj->field_product_picture['und'][0]['uri'];
+        $thumbnail_url = image_style_url("thumbnail", $img_url);  
+        $path = drupal_get_path_alias('node/' . $node_obj->nid);      
+        $nodes[] = array('title' => $node_obj->title,
+                         'path' => base_path() . $path,
+                         'product_no'=> $node_obj->field_product_no['und'][0]['value'],
+                         //'product_picture_url'=> file_create_url($img_url),
+                         'product_picture_url' => $thumbnail_url
+                         );
+        //kpr($node_obj); die();
+    }
+    return $nodes;
+}
+
+function myfunctionlib_get_tmps($nodes){
+    $tmp_nodes = array(array('title'=>'Bengal Tiger',
+                         'path' => '#',
+                         'product_no' => 'AN6001',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1385-AN2662-pr-b-TIGER.png'),
+                        ),
+                   array('title'=>'Black Rhinoceros',
+                         'path' => '#',
+                         'product_no' => 'AN6002',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1366-AN2687-pr-b-RHINO.png'),
+                        ),
+                   array('title'=>'Lion',
+                         'path' => '#',
+                         'product_no' => 'AN6003',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1365-AN2685-pr-LION.png'),
+                        ),
+                   array('title'=>'Lioness',
+                         'path' => '#',
+                         'product_no' => 'AN6004',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1404-AN2641-pr-b-LIONESS.png'),
+                        ),
+                   array('title'=>'Elephant',
+                         'path' => '#',
+                         'product_no' => 'AN6005',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1374-AN2684-pr-b-ELEPHANT.png'),
+                        ),
+                   array('title'=>'Bengal Tiger',
+                         'path' => '#',
+                         'product_no' => 'AN6001',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1385-AN2662-pr-b-TIGER.png'),
+                        ),
+                   array('title'=>'Black Rhinoceros',
+                         'path' => '#',
+                         'product_no' => 'AN6002',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1366-AN2687-pr-b-RHINO.png'),
+                        ),
+                   array('title'=>'Lion',
+                         'path' => '#',
+                         'product_no' => 'AN6003',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1365-AN2685-pr-LION.png'),
+                        ),
+                   array('title'=>'Lioness',
+                         'path' => '#',
+                         'product_no' => 'AN6004',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1404-AN2641-pr-b-LIONESS.png'),
+                        ),
+                   array('title'=>'Elephant',
+                         'path' => '#',
+                         'product_no' => 'AN6005',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1374-AN2684-pr-b-ELEPHANT.png'),
+                        ),
+                   array('title'=>'Bengal Tiger',
+                         'path' => '#',
+                         'product_no' => 'AN6001',
+                         'product_picture_url' => myfunctionlib_theme_path('images/1385-AN2662-pr-b-TIGER.png'),
+                        ),
+                   );
+    $node_n = count($nodes);     
+    for($i = 0; $i < $node_n; $i++){
+        $tmp_nodes[$i] = $nodes[$i];
+    }
+    
+    return $tmp_nodes;
+}
+
+function myfunctionlib_set_breadcrumbs($category, $taxonomy){
+  
+    //Build Breadcrumbs
+    $breadcrumb = array();
+    $breadcrumb[] = l('Home', '<front>');
+    //kpr($taxonomy); die();
+    if($taxonomy){
+        $taxonomy_title = ucfirst(str_replace('_', ' ', $taxonomy));
+        //if($taxonomy == 'figurines'){
+        //     $taxonomy_path = ($taxonomy == 'figurines')? 'categories' : str_replace('_', '-', $taxonomy);
+        // }
+        // else {                    
+            $taxonomy_path = str_replace('_', '-', $taxonomy);
+        //}
+        $breadcrumb[] = l($taxonomy_title, $taxonomy_path);
+    }
+
+    if($category) {
+        $category_title = ucfirst(str_replace('_', ' ', $category));
+        $category_path = str_replace('_', '-', $category);
+        $breadcrumb[] = l($category_title, $category_path);
+    }   
+ // kpr($breadcrumb); die();
+    // Set Breadcrumbs
+    drupal_set_breadcrumb($breadcrumb);
+}
+
+function myfunctionlib_get_other_products($type, $current_nid){
+    global $base_url;
+    $entities = (new EntityFieldQuery)->entityCondition("entity_type", "node")->entityCondition("bundle", $type)->execute();
+    $other_products = array();
+    $n = 0;
+    
+    $rand_keys = array();
+    if (count($entities['node']) > 5) {
+        $rand_keys = array_rand($entities['node'],5);
+    }
+    else{
+        $rand_keys = array_keys($entities['node']);
+    }
+    //kpr($rand_keys); die();
+    foreach ($rand_keys as $id) {
+      if($id != $current_nid){        
+        $n++;
+        if($n > 4){
+            break;
+        }
+        $product = node_load($id); 
+        $title = $product->title;
+        $product_url = $product->field_product_picture['und'][0]['uri'];        
+        $thumbnail_url = image_style_url("thumbnail", $product_url);
+        $url = $base_url.'/'.drupal_get_path_alias('node/'.$id);           
+        $other_products[$id] = array('title'=>$title,
+                                      'thumbnail_url'=>$thumbnail_url,
+                                      'url' => $url);
+      }
+    }
+    return $other_products;
+}

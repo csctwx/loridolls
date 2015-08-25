@@ -1,108 +1,73 @@
 <?php
-/**
- * Implements hook_html_head_alter().
- * This will overwrite the default meta character type tag with HTML5 version.
- */
-function multipurpose_html_head_alter(&$head_elements) {
-  $head_elements['system_meta_content_type']['#attributes'] = array(
-    'charset' => 'utf-8'
-  );
+function loridolls_preprocess_page(&$vars, $hook) { 
+  // Add js file in front page
+  if ($vars['is_front']) {
+    drupal_add_js(path_to_theme().'/nivo-slider/demo/scripts/jquery-1.11.1.min.js');    
+    drupal_add_js(path_to_theme().'/nivo-slider/jquery.nivo.slider.js');
+    drupal_add_js(path_to_theme().'/nivo-slider/script.js');
+  }
+
+  $vars['scripts'] = drupal_get_js();  
+  
+  // modify breadcrumbs if it is view page or node type belong to categories
+  $figurines_node_ids = taxonomy_select_nodes(1);
+  $figurines_types = array();
+  foreach ($figurines_node_ids as $figurines_node_id) {
+    $figurines_node = node_load($figurines_node_id);
+    $figurines_types[] = str_replace(' ', '_', strtolower($figurines_node->title));
+  }
+  $views_page = views_get_page_view();
+  if (is_object($views_page)) {    
+    $view_name = $views_page->name; 
+    if(in_array($view_name, $figurines_types)){
+      myfunctionlib_set_breadcrumbs('', 'figurines');
+    }    
+  }
+
+  $node_type = $vars['node']->type;  
+  if($node_type){ 
+    if($node_type == 'accessories') {
+      myfunctionlib_set_breadcrumbs('', 'accessories');
+    }
+    elseif(in_array($node_type, $figurines_types)){      
+        myfunctionlib_set_breadcrumbs($node_type, 'figurines');
+    }    
+  }
 }
 
-/**
- * Insert themed breadcrumb page navigation at top of the node content.
- */
-function multipurpose_breadcrumb($variables) {
+function loridolls_preprocess_image_style(&$vars) { 
+  $vars['attributes']['class'][] = 'img-responsive'; // can be 'img-rounded', 'img-circle', or 'img-thumbnail'
+}
+
+
+function loridolls_menu_tree($variables) {
+  return '<ul>' . $variables ['tree'] . '</ul>';
+}
+
+function loridolls_menu_link(array $variables) {
+  $element = $variables ['element'];
+  $sub_menu = '';
+
+  if ($element ['#below']) {
+    $sub_menu = drupal_render($element ['#below']);
+  }
+  $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
+  return '<li class="' . ($element ['#below'] ? ' has-sub':'') . '">' . $output . $sub_menu . "</li>\n";
+}
+
+function loridolls_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
-    // Use CSS to hide titile .element-invisible.
+    // Adding the title of the current page to the breadcrumb.
+    $breadcrumb[] = drupal_get_title();
+    
+    // Provide a navigational heading to give context for breadcrumb links to
+    // screen-reader users. Make the heading invisible with .element-invisible.
     $output = '<h2 class="element-invisible">' . t('You are here') . '</h2>';
-    // comment below line to hide current page to breadcrumb
-$breadcrumb[] = drupal_get_title();
-    $output .= '<nav class="breadcrumb">' . implode(' » ', $breadcrumb) . '</nav>';
+
+    $output .= '<div class="breadcrumb">' . implode(' » ', $breadcrumb) . '</div>';
     return $output;
   }
 }
 
-/**
- * Override or insert variables into the page template.
- */
-function multipurpose_preprocess_page(&$vars) {
-  if (isset($vars['main_menu'])) {
-    $vars['main_menu'] = theme('links__system_main_menu', array(
-      'links' => $vars['main_menu'],
-      'attributes' => array(
-        'class' => array('links', 'main-menu', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => t('Main menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      )
-    ));
-  }
-  else {
-    $vars['main_menu'] = FALSE;
-  }
-  if (isset($vars['secondary_menu'])) {
-    $vars['secondary_menu'] = theme('links__system_secondary_menu', array(
-      'links' => $vars['secondary_menu'],
-      'attributes' => array(
-        'class' => array('links', 'secondary-menu', 'clearfix'),
-      ),
-      'heading' => array(
-        'text' => t('Secondary menu'),
-        'level' => 'h2',
-        'class' => array('element-invisible'),
-      )
-    ));
-  }
-  else {
-    $vars['secondary_menu'] = FALSE;
-  }
-}
-
-/**
- * Duplicate of theme_menu_local_tasks() but adds clearfix to tabs.
- */
-function multipurpose_menu_local_tasks(&$variables) {
-  $output = '';
-
-  if (!empty($variables['primary'])) {
-    $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $variables['primary']['#prefix'] .= '<ul class="tabs primary clearfix">';
-    $variables['primary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['primary']);
-  }
-  if (!empty($variables['secondary'])) {
-    $variables['secondary']['#prefix'] = '<h2 class="element-invisible">' . t('Secondary tabs') . '</h2>';
-    $variables['secondary']['#prefix'] .= '<ul class="tabs secondary clearfix">';
-    $variables['secondary']['#suffix'] = '</ul>';
-    $output .= drupal_render($variables['secondary']);
-  }
-  return $output;
-}
-
-/**
- * Override or insert variables into the node template.
- */
-function multipurpose_preprocess_node(&$variables) {
-  $node = $variables['node'];
-  if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
-    $variables['classes_array'][] = 'node-full';
-  }
-  $variables['date'] = t('!datetime', array('!datetime' =>  date('j F Y', $variables['created'])));
-}
-
-function multipurpose_page_alter($page) {
-  // <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-  $viewport = array(
-    '#type' => 'html_tag',
-    '#tag' => 'meta',
-    '#attributes' => array(
-    'name' =>  'viewport',
-    'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
-    )
-  );
-  drupal_add_html_head($viewport, 'viewport');
-}
+?>
