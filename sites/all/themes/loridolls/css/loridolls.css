@@ -8,7 +8,78 @@ text-align:left !important;
 }
 
 #topNavContainer {    
-    z-index: 99;    
+    z-index: 99;  
+    position: relative;
+    /*overflow: hidden; */
+    padding-top: 158px; 
+}
+
+#header{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -1500px;
+}
+
+#header img {
+  display: block;
+  margin: 0 auto;
+}
+
+#button{
+  text-align: center;
+  background: url("../images/nav-out.png") repeat-x;
+}
+
+#menubox{
+  background-image: url("../images/nav-left.png"), url("../images/nav-right.png");
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0 99px;
+
+}
+
+#cssmenu{
+  height:70px;
+  background: url("../images/nav-middle.png") repeat-x;
+}
+
+#cssmenu > ul > li > a{
+  padding: 24px 10px;
+  color:#b2469a;
+}
+
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 23px;
+}
+
+#cssmenu > ul > li.has-sub::after {
+  right: 10px;
+  top: 28px;
+  border: 5px solid transparent;  
+  border-top-color: #b2469a;
+}
+
+#cssmenu ul ul {  
+  border:2px #ffd67b solid;
+}
+
+#cssmenu ul ul li a {
+  color:#b2469a;
+  background-color: #fdf2ed;  
+}
+
+#cssmenu > ul > li > ul::after {
+  content: '';
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ffd67b;
+  position: absolute;
+  top: -12px;
+  left: 30px;
 }
 
 #main {
@@ -16,7 +87,7 @@ text-align:left !important;
 }
 
 body {	
-	background-image:url(../images/pink-body-background.png);
+	background-image:url(../images/lori_main_bkg.png);
 	background-repeat:repeat;
 	background-color:rgb(80,61,51);	
 	

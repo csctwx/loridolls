@@ -70,29 +70,41 @@
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <?php print $page_top; ?>
-  <div id="topNavContainer">
-  <div id='cssmenu'>
-
-  <?php 
-    $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-    print drupal_render($main_menu_tree);
-  ?>
-    <!-- <ul>
-      <li><?php print l(t('Home'), '/', array('attributes' => array('class' => 'home'))); ?></li>
-      <li class='active has-sub'><?php print l(t('Figurines'), '/categories', array('attributes' => array('class' => 'figurines'))); ?>
+<div id="topNavContainer">
+  <div id="header">
+    <img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/lori_header_logo.png'; ?>" />
+  </div>  
+  <div id="button">
+    <div id="menubox">
+      <div id='cssmenu'>
+      <?php 
+        // $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
+        // print drupal_render($main_menu_tree);
+      ?>
         <ul>
-           <li class='has-sub'><?php print l(t('Dinosaurs'), '/dinosaurs', array('attributes' => array('class' => 'dinosaurs'))); ?></li>
-           <li class='has-sub'><?php print l(t('Fantasy Sets'), '/fantasy-sets', array('attributes' => array('class' => 'fantasy'))); ?></li>
-           <li class='has-sub'><?php print l(t('North American Animals'), '/north-american-animals', array('attributes' => array('class' => 'american'))); ?></li>
-           <li class='has-sub'><?php print l(t('Wild Animals'), '/wild-animals', array('attributes' => array('class' => 'wild'))); ?></li>
-           <li class='has-sub'><?php print l(t('Farm Animals'), '/farm-animals', array('attributes' => array('class' => 'farm'))); ?></li>
-           <li class='has-sub'><?php print l(t('Marine Animals'), '/marine-animals', array('attributes' => array('class' => 'marine'))); ?></li>
+          <li class='active has-sub'><?php print l(t('Dolls'), '/Dolls', array('attributes' => array('class' => 'dolls'))); ?>
+            <ul>
+               <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
+               <li><?php print l(t('Ballerinas'), '/fantasy-sets', array('attributes' => array('class' => 'fantasy'))); ?></li>
+               <li><?php print l(t('Pets & Dolls'), '/north-american-animals', array('attributes' => array('class' => 'american'))); ?></li>
+            </ul>
+          </li>
+          <li class='has-sub'><?php print l(t('Accessories'), '/accessories', array('attributes' => array('class' => 'accessories'))); ?>
+            <ul>
+               <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'dinosaurs'))); ?></li>
+               <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fantasy-sets', array('attributes' => array('class' => 'fantasy'))); ?></li>
+               <li class='has-sub'><?php print l(t('Urban Living'), '/north-american-animals', array('attributes' => array('class' => 'american'))); ?></li>
+               <li class='has-sub'><?php print l(t('Weekend Gateway'), '/wild-animals', array('attributes' => array('class' => 'wild'))); ?></li>
+            </ul>
+          </li>
+          <li><?php print l(t('Videos'), '/categories', array('attributes' => array('class' => 'figurines'))); ?>
+          </li>
+          <li><?php print l(t('Games & Downloads'), '/games', array('attributes' => array('class' => 'accessories'))); ?></li>
+          <li class='last'><?php print l(t('Where To Buy'), '/where-to-buy', array('attributes' => array('class' => 'buy'))); ?></li>
         </ul>
-      </li>
-      <li><?php print l(t('Accessories'), '/accessories', array('attributes' => array('class' => 'accessories'))); ?></li>
-      <li class='last'><?php print l(t('Where To Buy'), '/where-to-buy', array('attributes' => array('class' => 'buy'))); ?></li>
-    </ul> -->
-  </div>     
+      </div>
+    </div>    
+  </div>       
 </div>
   <?php print $page; ?>
   <?php print $page_bottom; ?> 
