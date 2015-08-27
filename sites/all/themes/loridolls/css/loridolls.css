@@ -10,7 +10,7 @@ text-align:left !important;
 #topNavContainer {    
     z-index: 99;  
     position: relative;
-    /*overflow: hidden; */
+    overflow: hidden; 
     padding-top: 158px; 
 }
 
@@ -37,7 +37,7 @@ text-align:left !important;
   background-repeat: no-repeat, no-repeat;
   display: inline-block;
   margin: 0 auto;
-  padding: 0 99px;
+  padding: 0 98px;
 
 }
 

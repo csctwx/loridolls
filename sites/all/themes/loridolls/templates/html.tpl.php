@@ -76,7 +76,9 @@
   <div id="header">
     <img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/lori_header_logo.png'; ?>" />
   </div>  
-  <div id="button">
+         
+</div>
+<div id="button">
     <div id="menubox">
       <div id='cssmenu'>
       <?php 
@@ -106,8 +108,7 @@
         </ul>
       </div>
     </div>    
-  </div>       
-</div>
+  </div>
   <?php print $page; ?>
   <?php print $page_bottom; ?> 
   <div id="bottomFooterContainer" class="container"> 
