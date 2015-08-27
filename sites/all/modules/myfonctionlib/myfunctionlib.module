@@ -1,6 +1,6 @@
 <?php
 function myfunctionlib_theme_path($path){
-	return base_path() . drupal_get_path('theme', 'terra') . '/' . $path;
+	return base_path() . drupal_get_path('theme', 'loridolls') . '/' . $path;
 } 
 
 function myfunctionlib_get_fields($content){

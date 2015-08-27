@@ -1013,3 +1013,38 @@ ul#sidebar-list-2 li {
   }
 
 }
+#bottomFooterContainer {
+  background: transparent url("../images/lori_footer.png") repeat-x;
+  width:100%;
+  max-width: none;
+  height: 213px;
+  font-family: 'Novecento-DemiBold', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+#wrapper{
+  width: 80%;
+  margin:20px auto;
+}
+
+#copyright{
+  /*width:60%;
+  margin: 0 auto;*/
+  color: #666;
+  padding: 10px;
+  text-align: center;
+  background-color: #fff;
+  margin-top:75px;
+}
+
+#copyright a{
+  color: #666;
+}
+
+.theme-default #slider a.nivo-nextNav {
+  right: -33px;
+}
+
+.theme-default #slider a.nivo-prevNav {
+    left: -33px;
+}

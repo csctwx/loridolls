@@ -12,8 +12,10 @@
   <title><?php print $head_title; ?></title>
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-   <!-- InstanceEndEditable -->
+  <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  
+  <!-- InstanceEndEditable -->
   <!--script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -108,8 +110,12 @@
 </div>
   <?php print $page; ?>
   <?php print $page_bottom; ?> 
-  <div id="bottomFooterContainer">    
-    <h6>©<?php echo date('Y'); ?> TERRA by Battat™.<br> <a href="http://www.battatco.com" target="_blank">Maison Joseph Battat Ltd.</a> All Rights Reserved.</h6>    
+  <div id="bottomFooterContainer" class="container"> 
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-4" id="copyright">©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
+        <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICYSE</a>
+      </div>    
+    </div>    
   </div> 
 </body>
 </html>

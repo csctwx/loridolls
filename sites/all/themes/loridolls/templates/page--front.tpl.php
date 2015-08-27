@@ -18,20 +18,16 @@
 
 <div id="containerHomepage">
   <div style="width:70%; height:auto; margin:0 auto 2% auto; background:lime; padding:2%; display:none;">
-    <div class="homepageMissionStatement">
-        <p>TERRA BY BATTAT&trade; collectibles feature exquisite detail and captivating design. Hand painted original characters are available in all your favorite categories: horses, sea life, farm animals, wild animals, dinosaurs, goblins, dragons, and warriors with legends to share.
-        </p>
+      <div class="homepageMissionStatement">
+          <img src="<?php echo myfunctionlib_theme_path('images/homepage-statement.png'); ?>">
+      </div>
+      <div class="homepageRandomNews">
+        <img src="<?php echo myfunctionlib_theme_path('images/homepage-dinosaur-burst.png'); ?>" width="100%" />
     </div>
-    <div class="homepageRandomNews">
-      <img src="<?php echo myfunctionlib_theme_path('images/homepage-dinosaur-burst.png'); ?>" width="100%" />
   </div>
-</div>
 <div class="homepageMissionStatementContainer">
     <div class="homepageMissionStatementTwo">
-        <p><span>TERRA BY BATTAT&trade;</span> collectibles feature exquisite detail and captivating design. Hand painted original characters are available in all your favorite categories: <a href="#">horses</a>, <a href="#">sea life</a>, <a href="#">farm animals</a>, <a href="#">wild animals</a>, <a href="#">goblins</a>, <a href="#">dragons</a>, and <a href="#">warriors</a> with legends to share. We also feature detailed dinosaur models from the <a href="#" class="danLorussoLink">Dan LoRusso Collection&trade;</a>
-        </p>
-        <p style="display:none;">We also feature detailed dinosaur models from the Dan LoRusso Collection&trade;
-        </p>
+        <img src="<?php echo myfunctionlib_theme_path('images/homepage-statement.png'); ?>">
     </div>
     <div class="homepageRandomNewsTwo">
       <img src="<?php echo myfunctionlib_theme_path('images/homepage-dinosaur-burst-reversed-closeup.png'); ?>" width="90%" />
@@ -39,7 +35,7 @@
 </div>
 <div id="crossSellingContainer">
     <div class="crossSellTitleRuler"></div>
-    <div class="crossSellTitle">TERRA BY BATTAT&trade; THEMES</div>
+    <div class="crossSellTitle">LET'S GO FOR A WALK!</div>
     <div class="crossSellTitleRuler"></div>
     <div class="crossSellingThumbContainer homepageCrossSellingThumbContainer"> 
       <?php if ($page['footer']): ?>         
