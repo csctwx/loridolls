@@ -5,6 +5,7 @@ engine = phptemplate
 
 scripts[] = js/script.js
 scripts[] = nivo-slider/jquery.nivo.slider.js
+scripts[] = js/jquery.gradientify.min.js
 
 stylesheets[all][] = css/nav-styles.css
 stylesheets[screen][] = nivo-slider/themes/default/default.css

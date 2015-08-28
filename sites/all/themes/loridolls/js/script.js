@@ -46,6 +46,61 @@ $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id
     			$(this).parent().addClass('open');
     		}
     	});
+
+    //Gradientify header and footer  bottomFooterContainer
+    $("#header").gradientify({
+        // Gradient angle
+        angle: '90deg',
+        // Frames per second
+        fps: 24,
+        // Transition time
+        transition_time: 2,
+        
+      // Gradients
+      gradients: [
+                    { start: [228,255,0], stop: [202,119,53] },
+                  { start: [202,119,53], stop: [228,255,0] }
+                  
+                  ] 
+      // Gradients
+      <!--gradients: [
+        <!--{ start: [243,254,154], stop: [255,162,0] },
+      <!--{ start: [255,162,0], stop: [243,254,154] }
+      
+      <!--]
+      // Gradients
+      <!--gradients: [-->
+        <!--{ start: [236,123,165], stop: [236,123,165] },
+        <!--{ start: [255,192,0], stop: [255,192,0] }
+      <!--]
+    });
+
+    $("#bottomFooterContainer").gradientify({
+        // Gradient angle
+        angle: '90deg',
+        // Frames per second
+        fps: 24,
+        // Transition time
+        transition_time: 2,
+        
+      // Gradients
+      gradients: [
+                    { start: [228,255,0], stop: [202,119,53] },
+                  { start: [202,119,53], stop: [228,255,0] }
+                  
+                  ] 
+      // Gradients
+      <!--gradients: [
+        <!--{ start: [243,254,154], stop: [255,162,0] },
+      <!--{ start: [255,162,0], stop: [243,254,154] }
+      
+      <!--]
+      // Gradients
+      <!--gradients: [-->
+        <!--{ start: [236,123,165], stop: [236,123,165] },
+        <!--{ start: [255,192,0], stop: [255,192,0] }
+      <!--]
+    });
 });
 } )( jQuery );
 

@@ -163,7 +163,7 @@ body {
 }
 
 .thumbnail{
-  background-color: #e3c697;
+  background-color: transparent;
 }
 
 .thumbnail:hover{
@@ -1013,13 +1013,23 @@ ul#sidebar-list-2 li {
   }
 
 }
-#bottomFooterContainer {
-  background: transparent url("../images/lori_footer.png") repeat-x;
+#bottomFooterContainer {  
   width:100%;
   max-width: none;
   height: 213px;
   font-family: 'Novecento-DemiBold', Arial, Helvetica, sans-serif;
   font-weight: normal;
+  margin:0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#footer-bg {
+  width: 100%;
+  height: 100%;
+  background: transparent url("../images/lori_footer.png") repeat-x;
+  margin:0;
+  padding: 0;
 }
 
 #wrapper{
