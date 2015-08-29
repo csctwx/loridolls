@@ -340,7 +340,10 @@ body > #container , #containerHomepage,
   max-width: 1234px;
 }
 
-
+body > #container , #containerHomepage{
+  max-width: 900px;
+  margin-bottom: 20px !important;
+}
 
 
 
@@ -1034,6 +1037,7 @@ ul#sidebar-list-2 li {
 #wrapper{
   width: 80%;
   margin:20px auto;
+  max-width: 1035px;
 }
 
 #copyright{
