@@ -38,7 +38,6 @@ text-align:left !important;
   display: inline-block;
   margin: 0 auto;
   padding: 0 98px;
-
 }
 
 #cssmenu{
@@ -1057,4 +1056,42 @@ ul#sidebar-list-2 li {
 
 .theme-default #slider a.nivo-prevNav {
     left: -33px;
+}
+
+@media all and (max-width: 990px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: 100%;
+    margin: 0;
+  }
+
+  #cssmenu > ul {
+    height: auto;
+    display: block;
+    /*background:rgb(80,23,03);*/
+    background-color: #fdf2ed;  
+  }
+
+  #cssmenu > ul > li#menu-button > a,
+  #cssmenu > ul.open > li#menu-button > a {
+    color: #b2469a;
+    border-bottom: 1px solid orange;
+    text-align: left;
+  }
+
+  #cssmenu #menu-button::before,
+  #cssmenu #menu-button::after,
+  #cssmenu ul.open #menu-button::after, 
+  #cssmenu ul.open #menu-button::before {
+    border-color: #b2469a;;
+  }
+
+  #menubox {
+     width: 60%; 
+  }
+}
+
+@media all and (max-width: 660px) {
+  #topNavContainer {
+    height:158px !important;
+  }
 }
