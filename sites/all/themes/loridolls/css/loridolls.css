@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
+  position: relative;
 }
 
 #description p {
@@ -12,6 +13,7 @@ text-align:left !important;
     position: relative;
     overflow: hidden; 
     padding-top: 158px; 
+    max-width: 3000px;
 }
 
 #header{
@@ -48,6 +50,9 @@ text-align:left !important;
 #cssmenu > ul > li > a{
   padding: 24px 10px;
   color:#b2469a;
+  font-size:115%;
+  margin:0 10px;
+  text-transform: none;
 }
 
 #cssmenu > ul > li.has-sub > a {
@@ -68,7 +73,20 @@ text-align:left !important;
 #cssmenu ul ul li a {
   color:#b2469a;
   background-color: #fdf2ed;  
+  padding: 10px 20px;
+  width: 150px;
+  font-size:100%;
+  text-transform: none;
+  text-align:left;
+  line-height:1.2em;
 }
+
+#cssmenu > ul > li:hover > ul {
+  left: auto;
+  top: 60px;
+  opacity: 1;
+}
+
 
 #cssmenu > ul > li > ul::after {
   content: '';
@@ -343,6 +361,8 @@ body > #container , #containerHomepage,
 body > #container , #containerHomepage{
   max-width: 900px;
   margin-bottom: 20px !important;
+  background-color: transparent;
+  padding: 20px 0;
 }
 
 
@@ -727,10 +747,6 @@ body.node-type-wild-animals #container {
   line-height:2em;
 }
 
-#cssmenu ul ul li a {    
-    padding: 10px 20px;
-    width: 150px;
-}
 
 .breadcrumb {
   background-color: transparent;
@@ -1024,6 +1040,7 @@ ul#sidebar-list-2 li {
   margin:0;
   padding: 0;
   overflow-x: hidden;
+  position: relative;
 }
 
 #footer-bg {
@@ -1031,7 +1048,24 @@ ul#sidebar-list-2 li {
   height: 100%;
   background: transparent url("../images/lori_footer.png") repeat-x;
   margin:0;
-  padding: 0;
+}
+
+#footer-bg > .row {
+  padding: 5% 0;
+  height: 100%;
+ /* background-image: url("../images/");*/
+ position: relative;
+}
+
+#doll{
+  height: 241px;
+  width: 20%;
+  position: absolute;
+  background: transparent url("../images/footer-redhead-doll.png") no-repeat;
+  z-index: 999;
+  bottom: 0;
+  right: 13%;
+  background-size: cover;
 }
 
 #wrapper{
@@ -1046,22 +1080,40 @@ ul#sidebar-list-2 li {
   color: #666;
   padding: 10px;
   text-align: center;
-  background-color: #fff;
-  margin-top:75px;
+  background-color: transparent;
+  /*background-image:  url("../images/legal-lines-box.png");
+  background-size: 100% auto;  
+  background-repeat: no-repeat; */
+  /*margin-top:20%;*/
+
+  border: 20px solid transparent;
+  padding: 0;
+  -webkit-border-image: url(border.png) 30 round;
+  -o-border-image: url(border.png) 30 round;
+  border-image: url("../images/legal-lines-box.png") 30 round;
+  /* border-image-width: 20px; */
+  display: table;
+
+}
+
+#copyright-msg{
+  display: table-cell;
+  /*height: 60px;*/
+  background-color:#FDF2ED; 
 }
 
 #copyright a{
   color: #666;
 }
 
-.theme-default #slider a.nivo-nextNav {
+/*.theme-default #slider a.nivo-nextNav {
   right: -33px;
 }
 
 .theme-default #slider a.nivo-prevNav {
     left: -33px;
 }
-
+*/
 @media all and (max-width: 990px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #cssmenu {
     width: 100%;
@@ -1098,4 +1150,27 @@ ul#sidebar-list-2 li {
   #topNavContainer {
     height:158px !important;
   }
+}
+
+.theme-default .nivo-directionNav a.nivo-prevNav {  
+  left: -48px;
+  top: 40%;
+  width: 47px;
+  height: 88px;
+  background: url(../images/lori-slideshow-leftArrow.png) no-repeat;
+}
+
+.theme-default .nivo-directionNav a.nivo-nextNav {  
+  right: -49px;
+  top: 40%;
+  width: 47px;
+  height: 88px;
+  background: url(../images/lori-slideshow-rightArrow.png) no-repeat;
+}
+
+#cssmenu ul li a {
+
+  font-family:'Droid Serif', Arial, Helvetica, sans-serif;
+  font-weight:700;
+
 }

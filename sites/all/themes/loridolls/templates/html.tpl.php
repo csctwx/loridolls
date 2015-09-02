@@ -111,12 +111,21 @@
   </div>
   <?php print $page; ?>
   <?php print $page_bottom; ?> 
-  <div id="bottomFooterContainer" class="container"> 
+   <div id="doll"></div>
+  <div id="bottomFooterContainer" class="container">    
     <div id="footer-bg">
        <div class="row">
-        <div class="col-xs-4 col-xs-offset-4" id="copyright">©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
-          <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICYSE</a>
-        </div>    
+         <!-- <div id="doll"> -->
+           <div class="col-xs-4 col-xs-offset-4" id="copyright">
+            <div id="copyright-msg">
+              ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
+            <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICYSE</a>
+            </div>          
+          </div> 
+         <!-- </div> -->
+        
+        <!-- <div class="col-xs-4 footer-doll">
+        </div>    -->
       </div>    
     </div>    
   </div> 
