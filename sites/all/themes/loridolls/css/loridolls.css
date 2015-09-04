@@ -1102,13 +1102,17 @@ ul#sidebar-list-2 li {
   background-color:#FDF2ED; 
   font-family: 'Droid Serif', Arial, Helvetica, sans-serif;
   color:rgb(178, 70, 154);
-  font-size: 13px;
+  font-size: 12px;
 }
 
 #copyright a{
   color:rgb(178, 70, 154);
 }
 
+#copyright a:hover{
+  color:rgb(80, 61, 51);
+}
+80,61,51
 @media all and (max-width: 990px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   #cssmenu {
     width: 150px;
