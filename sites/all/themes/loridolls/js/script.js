@@ -48,7 +48,7 @@ $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id
     	});
 
     //Gradientify header and footer  bottomFooterContainer
-    $("#header").gradientify({
+    $("#topNavContainer").gradientify({
         // Gradient angle
         angle: '90deg',
         // Frames per second

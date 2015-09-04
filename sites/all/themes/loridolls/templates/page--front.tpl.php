@@ -2,9 +2,9 @@
 <div id="wrapper" >
     <div class="slider-wrapper theme-default slideshowWide">
         <div id="slider" class="nivoSlider">
-            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/homepage-slide1.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/homepage-slide2.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/homepage-slide3.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/slide1.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/slide2.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/slide3.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
         </div>
     </div>
     <div class="slider-wrapper theme-default slideshowNarrow">
@@ -17,7 +17,7 @@
 </div>
 
 <div id="containerHomepage">
-  <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-4.png'); ?>">
+  <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-rev2.png'); ?>">
   <!-- <div style="width:70%; height:auto; margin:0 auto 2% auto; background:lime; padding:2%; display:none;">
       <div class="homepageMissionStatement">
           <img src="<?php echo myfunctionlib_theme_path('images/homepage-statement.png'); ?>">

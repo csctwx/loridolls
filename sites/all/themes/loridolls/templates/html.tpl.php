@@ -74,18 +74,14 @@
   <?php print $page_top; ?>
 <div id="topNavContainer">
   <div id="header">
-    <img src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/lori_header_logo.png'; ?>" />
-  </div>  
-         
-</div>
-<div id="button">
-    <div id="menubox">
-      <div id='cssmenu'>
+    <div id='cssmenu'>
       <?php 
         // $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
         // print drupal_render($main_menu_tree);
       ?>
         <ul>
+          <!-- <li><?php print l(t(' '), '/', array('attributes' => array('class' => 'home'))); ?>
+          </li> -->
           <li class='active has-sub'><?php print l(t('Dolls'), '/Dolls', array('attributes' => array('class' => 'dolls'))); ?>
             <ul>
                <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
@@ -104,30 +100,30 @@
           <li><?php print l(t('Videos'), '/categories', array('attributes' => array('class' => 'figurines'))); ?>
           </li>
           <li><?php print l(t('Games & Downloads'), '/games', array('attributes' => array('class' => 'accessories'))); ?></li>
-          <li class='last'><?php print l(t('Where To Buy'), '/where-to-buy', array('attributes' => array('class' => 'buy'))); ?></li>
+          <!-- <li class='last'><?php print l(t('Where To Buy'), '/where-to-buy', array('attributes' => array('class' => 'buy'))); ?></li> -->
         </ul>
       </div>
-    </div>    
   </div>
-  <?php print $page; ?>
-  <?php print $page_bottom; ?> 
-   <div id="doll"></div>
-  <div id="bottomFooterContainer" class="container">    
-    <div id="footer-bg">
-       <div class="row">
-         <!-- <div id="doll"> -->
-           <div class="col-xs-4 col-xs-offset-4" id="copyright">
-            <div id="copyright-msg">
-              ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
-            <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICYSE</a>
-            </div>          
-          </div> 
-         <!-- </div> -->
-        
-        <!-- <div class="col-xs-4 footer-doll">
-        </div>    -->
-      </div>    
+</div>
+<?php print $page; ?>
+<?php print $page_bottom; ?> 
+<div id="doll"></div>
+<div id="bottomFooterContainer" class="container">    
+  <div id="footer-bg">
+     <div class="row">
+       <!-- <div id="doll"> -->
+         <div class="col-xs-4 col-xs-offset-4" id="copyright">
+          <div id="copyright-msg">
+            ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
+          <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICY</a>-<a href="#" target="_blank">WHERE TO BUY</a>-<a href="#" target="_blank">FAQS</a>
+          </div>          
+        </div> 
+       <!-- </div> -->
+      
+      <!-- <div class="col-xs-4 footer-doll">
+      </div>    -->
     </div>    
-  </div> 
+  </div>    
+</div> 
 </body>
 </html>
