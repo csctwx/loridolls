@@ -1191,3 +1191,33 @@ ul#sidebar-list-2 li {
 .theme-default .nivo-directionNav a.nivo-nextNav{
   opacity: 1;
 }
+.container {
+  background: transparent; 
+  width: 100%;
+  padding: 0;
+}
+
+.menu-trigger {
+  display: none;
+}
+
+.menu-trigger:before {  
+  background: #fff;
+  box-shadow: 0 6px transparent, 0 12px #fff, 0 18px transparent, 0 24px #fff;  
+}
+
+@media all and (max-width: 990px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  
+  #cssmenu > ul {
+    display: none;    
+  }
+
+  .menu-trigger {
+    display: block;
+  }
+    
+}
+
+.mp-level {
+  background-color: #FBE3ED;
+}

@@ -5,6 +5,7 @@ engine = phptemplate
 
 scripts[] = js/script.js
 scripts[] = nivo-slider/jquery.nivo.slider.js
+scripts[] = js/modernizr.custom.js
 scripts[] = js/jquery.gradientify.min.js
 
 stylesheets[all][] = css/nav-styles.css
@@ -15,6 +16,10 @@ stylesheets[all][] = css/reset.css
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/media-queries.css
 stylesheets[all][] = css/sinister-css/sinister.css
+stylesheets[all][] = css/normalize.css
+stylesheets[all][] = css/demo.css
+stylesheets[all][] = css/icons.css
+stylesheets[all][] = css/component.css
 
 stylesheets[all][] = css/loridolls.css
 
