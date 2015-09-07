@@ -115,7 +115,8 @@
          <div class="col-xs-4 col-xs-offset-4" id="copyright">
           <div id="copyright-msg">
             ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
-          <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">TERM OF USE</a>-<a href="#" target="_blank">PRIVACY POLICY</a>-<a href="#" target="_blank">WHERE TO BUY</a>-<a href="#" target="_blank">FAQS</a>
+          <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">WHERE TO BUY</a>-<a href="#" target="_blank">FAQs</a>
+          <br /><a href="#" target="_blank">TERMS OF USE</a>-<a href="#" target="_blank">PRIVACY POLICY</a>
           </div>          
         </div> 
        <!-- </div> -->

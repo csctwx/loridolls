@@ -17,22 +17,7 @@
 </div>
 
 <div id="containerHomepage">
-  <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-rev2.png'); ?>">
-  <!-- <div style="width:70%; height:auto; margin:0 auto 2% auto; background:lime; padding:2%; display:none;">
-      <div class="homepageMissionStatement">
-          <img src="<?php echo myfunctionlib_theme_path('images/homepage-statement.png'); ?>">
-      </div>
-      <div class="homepageRandomNews">
-          <img src="<?php echo myfunctionlib_theme_path('images/homepage-dinosaur-burst.png'); ?>" width="100%" />
-      </div>
-  </div>
-  <div class="homepageMissionStatementContainer">
-    <div class="homepageMissionStatementTwo">
-        <img src="<?php echo myfunctionlib_theme_path('images/homepage-statement.png'); ?>">
-    </div>
-    <div class="homepageRandomNewsTwo">
-      <img src="<?php echo myfunctionlib_theme_path('images/homepage-dinosaur-burst-reversed-closeup.png'); ?>" width="90%" />
-  </div> -->
+  <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-rev1.png'); ?>">  
 </div>
 <!-- <div id="crossSellingContainer">
     <div class="crossSellTitleRuler"></div>
@@ -44,8 +29,6 @@
       <?php endif; ?>
       <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
           <div class="carousel-inner">
-            
-            
             <div class="active item">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="thumbnail">
@@ -61,7 +44,6 @@
                   </div>
               </div>
             </div>
-
             <div class="item">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="thumbnail">
@@ -77,7 +59,6 @@
                   </div>
               </div>
             </div>
-
             <div class="item">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="thumbnail">
@@ -93,7 +74,6 @@
                   </div>
               </div>
             </div>
-
             <div class="item">
               <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                   <div class="thumbnail">
@@ -109,13 +89,9 @@
                   </div>
               </div>
             </div>
-
-            
-        
           </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img src="<?php echo myfunctionlib_theme_path('images/arrow-left.png'); ?>"></a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next"><img src="<?php echo myfunctionlib_theme_path('images/arrow-right.png'); ?>"></a>
-        
     </div>
    </div>
 </div> -->
