@@ -42,12 +42,21 @@ text-align:left !important;
   padding-top: 15px;
 }
 
-#cssmenu > ul > li > a{
+#cssmenu > ul > li > a,
+.mp-menu ul li a{
   padding: 24px 10px;
   color:#b2469a;
   font-size:115%;
   margin:0 10px;
   text-transform: none;
+}
+
+.mp-menu ul li > a {    
+    box-shadow: inset 0 -1px rgba(178,70,154,0.2);
+}
+
+.mp-menu ul li:first-child > a{
+    box-shadow: inset 0 -1px rgba(178,70,154,0.2);
 }
 
 #cssmenu > ul > li.has-sub > a {
@@ -1218,6 +1227,31 @@ ul#sidebar-list-2 li {
     
 }
 
+.mp-menu h2{
+  color: #fff;
+  background-color: #f388af;
+}
+
+
+
 .mp-level {
   background-color: #FBE3ED;
+}
+
+.mp-back{
+  background-color: transparent;
+}
+
+.mp-back::after{
+  content: none;
+}
+
+@media all and (min-width: 991px) {
+  #mp-pusher{
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+}
+
+#mp-menu > .mp-level > h2{
+  cursor: pointer;
 }

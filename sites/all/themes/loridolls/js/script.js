@@ -62,17 +62,7 @@ $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id
                   { start: [202,119,53], stop: [228,255,0] }
                   
                   ] 
-      // Gradients
-      <!--gradients: [
-        <!--{ start: [243,254,154], stop: [255,162,0] },
-      <!--{ start: [255,162,0], stop: [243,254,154] }
       
-      <!--]
-      // Gradients
-      <!--gradients: [-->
-        <!--{ start: [236,123,165], stop: [236,123,165] },
-        <!--{ start: [255,192,0], stop: [255,192,0] }
-      <!--]
     });
 
     $("#bottomFooterContainer").gradientify({
@@ -89,18 +79,16 @@ $('#cssmenu').prepend('<div id="indicatorContainer"><div id="pIndicator"><div id
                   { start: [202,119,53], stop: [228,255,0] }
                   
                   ] 
-      // Gradients
-      <!--gradients: [
-        <!--{ start: [243,254,154], stop: [255,162,0] },
-      <!--{ start: [255,162,0], stop: [243,254,154] }
       
-      <!--]
-      // Gradients
-      <!--gradients: [-->
-        <!--{ start: [236,123,165], stop: [236,123,165] },
-        <!--{ start: [255,192,0], stop: [255,192,0] }
-      <!--]
     });
+
+    //scroll menu
+    $("#mp-menu > .mp-level > h2").click(function(){
+      // alert("hello");
+      $("a#trigger.menu-trigger").trigger( "click" );
+      // $("#mp-pusher").css("transform","translate3d(0px, 0px, 0px) !important;");
+    });
+
 });
 } )( jQuery );
 
