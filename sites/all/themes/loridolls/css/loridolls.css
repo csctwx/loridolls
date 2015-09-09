@@ -260,15 +260,13 @@ a.right.carousel-control img {
 }
 
 #productTitleDetailPage {
-    width:75%; 
-    margin: 7% auto 0;
-    /*padding-left: 23px;*/
+    width:85%; 
+    margin: 0 auto;    
 }
 
 #breadcrumb {
-    width:75%; 
-    margin: 1% auto 0;
-    /*padding-left: 23px;*/
+    width:85%; 
+    margin: 0 auto;   
 }
 
 #container > .view {
@@ -282,9 +280,6 @@ a.right.carousel-control img {
    padding: 0; 
 }
 
-#breadcrumb .breadcrumb{    
-    padding-left: 0;
-}
 
 #productTitleDetailPageDino {
     width:75%; 
@@ -293,7 +288,13 @@ a.right.carousel-control img {
 
 #productTitleDetailPage h2, #productTitleDetailPageDino h2 {
   font-size: 210%;
+  line-height: 1em;
+  word-wrap:break-word;
+  padding: 0;
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
+
 
 body.node-type-dinosaurs #productTitleDetailPageDino {
     width:75%; 
@@ -327,11 +328,9 @@ body.node-type-dinosaurs #productTitleDetailPageDino {
 }
 
 
-#container {    
-    background: #ffe9bf url("../images/map-beige-bg.jpg") no-repeat ;
-	/*background-size:100% auto;*/
-    margin-top: 150px;   
-    
+#container {        
+    margin-top: 10px;  
+    margin-bottom: 50px;     
 }
 
 @media (min-width: 420px){
@@ -757,18 +756,19 @@ body.node-type-wild-animals #container {
   line-height:2em;
 }
 
-
 .breadcrumb {
   background-color: transparent;
-  color: maroon;
-  font-family: 'Novecento-DemiBold', Arial, Helvetica, sans-serif;
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
   text-transform: uppercase;
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 .breadcrumb a, 
 .breadcrumb a:visited {
-  color: maroon;
-  font-family: 'Novecento-DemiBold', Arial, Helvetica, sans-serif;
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
 body.page-node-11 .thumbPageContainer{
@@ -941,11 +941,6 @@ table.thumbPageContainer td input[type=button] {
   text-transform: uppercase;
   padding: 1px 5px;
   border: 1px solid #9b654a;
-}
-
-#productTitleDetailPage h2, #productTitleDetailPageDino h2 {  
-  line-height: 1em;
-  word-wrap:break-word;
 }
 
 #outputDiv {
@@ -1225,6 +1220,10 @@ ul#sidebar-list-2 li {
   .menu-trigger {
     display: block;
   }
+
+  a.home{
+    margin-left: -250px;
+  }
     
 }
 
@@ -1255,4 +1254,20 @@ ul#sidebar-list-2 li {
 
 #mp-menu > .mp-level > h2{
   cursor: pointer;
+}
+
+.dolls a img{
+    margin: 0 auto;
+}
+
+.dolls .views-row-2 {
+  margin-top: -55px;
+}
+
+a.home{
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height:100px;
+  z-index: 600;
 }

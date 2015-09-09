@@ -53,13 +53,13 @@
       // add class img-responsive to carousel thumbnail image
       $('.carousel[data-type="multi"] .item .thumbnail img').addClass('img-responsive');  
 
-      //modify view figurines' link destination
-      $('.view-figurines .thumbnail').each(function(){
-        var title = $(this).find('.views-field-title a').text().replace(/\s/g,'-').toLowerCase();
-        $(this).find('a').each(function(){
+      //modify view dolls' link destination
+      $('.dolls .field-content a').each(function(){
+        var title = $(this).attr('href').replace(/content\//g,'').toLowerCase();
+        // $(this).find('a').each(function(){
           console.log(title);
           $(this).attr('href', title);
-        });
+        // });
       });  
 
     });
@@ -131,7 +131,8 @@
             <div id="topNavContainer">
               <div id="header"> 
                            
-                <div id='cssmenu'>   
+                <div id='cssmenu'>  
+                 <?php print l(t(' '), '/', array('attributes' => array('class' => 'home'))); ?>
                  <a href="#" id="trigger" class="menu-trigger">&nbsp;</a>              
                   <?php 
                     // $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
