@@ -1271,3 +1271,12 @@ a.home{
   height:100px;
   z-index: 600;
 }
+
+.mp-pusher.mp-pushed::after, 
+.mp-level.mp-level-overlay::after {  
+  z-index: 99;
+}
+
+.scroller {
+  overflow-y: auto;
+}
