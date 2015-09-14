@@ -7,6 +7,7 @@ scripts[] = js/script.js
 scripts[] = nivo-slider/jquery.nivo.slider.js
 scripts[] = js/modernizr.custom.js
 scripts[] = js/jquery.gradientify.min.js
+scripts[] = js/masonry-docs.min.js
 
 stylesheets[all][] = css/nav-styles.css
 stylesheets[screen][] = nivo-slider/themes/default/default.css
@@ -20,6 +21,8 @@ stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/demo.css
 stylesheets[all][] = css/icons.css
 stylesheets[all][] = css/component.css
+stylesheets[all][] = css/masonry-docs.css
+
 
 stylesheets[all][] = css/loridolls.css
 

@@ -10,17 +10,18 @@ function loridolls_preprocess_page(&$vars, $hook) {
   $vars['scripts'] = drupal_get_js();  
   
   // modify breadcrumbs if it is view page or node type belong to categories
-  $figurines_node_ids = taxonomy_select_nodes(1);
-  $figurines_types = array();
-  foreach ($figurines_node_ids as $figurines_node_id) {
-    $figurines_node = node_load($figurines_node_id);
-    $figurines_types[] = str_replace(' ', '_', strtolower($figurines_node->title));
+  $dolls_node_ids = taxonomy_select_nodes(2);
+  //kpr($figurines_node_ids); die();
+  $dolls_types = array();
+  foreach ($dolls_node_ids as $dolls_node_id) {
+    $dolls_node = node_load($dolls_node_id);
+    $dolls_types[] = str_replace(' ', '_', strtolower($dolls_node->title));
   }
   $views_page = views_get_page_view();
   if (is_object($views_page)) {    
     $view_name = $views_page->name; 
-    if(in_array($view_name, $figurines_types)){
-      myfunctionlib_set_breadcrumbs('', 'figurines');
+    if(in_array($view_name, $dolls_types)){
+      myfunctionlib_set_breadcrumbs('', 'dolls');
     }    
   }
 

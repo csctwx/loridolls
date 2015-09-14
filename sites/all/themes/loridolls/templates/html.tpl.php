@@ -25,6 +25,7 @@
   <?php print $styles; ?>
   <!-- bootstrap lib -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
   <script>
     $(function(){
       $('.carousel[data-type="multi"] .item').each(function(){
@@ -86,9 +87,7 @@
                 <div class="mp-level">
                   <h2 class="mp-back">back <b class="pull-right">&gt;</b></h2>
                   <ul>
-                    <li>
-                      <a href="#">Fashion Dolls</a>
-                    </li>
+                    <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
                     <li>
                       <a href="#">Ballerinas</a>
                     </li>

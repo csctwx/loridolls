@@ -210,3 +210,8 @@ function myfunctionlib_get_other_products($type, $current_nid){
     }
     return $other_products;
 }
+
+function myfunctionlib_remove_width( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}

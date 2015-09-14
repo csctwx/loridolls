@@ -233,20 +233,20 @@ CSS Document */
 	}*/ 
 
 	#topNavContainer {
-		background: /*purple*/ url(../images/topNav-kraft-mobile-360-leftJust.png) top no-repeat !important;
+		/*background:  url(../images/topNav-kraft-mobile-360-leftJust.png) top no-repeat !important;*/
 
-		width:100% !important;
+		/*width:100% !important;
 		
 		height:250px !important;
 		
 		position:fixed;
 		top:0;
-		right:0;
+		right:0;*/
 		
 		/*z-index:10000;*/
 		
-		left: 50%;           /* Start at 50% of browser window */
-		margin-left: -532px; /* Go half of width to the left, centering the element */
+		/*left: 50%;           
+		margin-left: -532px; */
 		
 	}
 
