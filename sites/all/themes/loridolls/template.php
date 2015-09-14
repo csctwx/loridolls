@@ -30,8 +30,8 @@ function loridolls_preprocess_page(&$vars, $hook) {
     if($node_type == 'accessories') {
       myfunctionlib_set_breadcrumbs('', 'accessories');
     }
-    elseif(in_array($node_type, $figurines_types)){      
-        myfunctionlib_set_breadcrumbs($node_type, 'figurines');
+    elseif(in_array($node_type, $dolls_types)){      
+        myfunctionlib_set_breadcrumbs($node_type, 'dolls');
     }    
   }
 }
