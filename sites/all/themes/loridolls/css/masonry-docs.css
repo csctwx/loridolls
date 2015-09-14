@@ -1060,7 +1060,7 @@ you can use the generic selector below, but it's slower:
 /* container
 ------------------------- */
 
-.container {
+/*.container {
   margin-left: 10px;
   margin-right: 10px;
   max-width: 1200px;
@@ -1073,7 +1073,7 @@ you can use the generic selector below, but it's slower:
     margin-right: 200px;
   }
 
-}
+}*/
 
 /* call out
 ------------------------- */
