@@ -18,86 +18,73 @@
                             'measurements', 
                             'piece_count',                            
                           );
-// kpr($node); kpr($id); die();
+
   $other_products = myfunctionlib_get_other_products($type, $node->nid);                  
+  // kpr($other_products); die();
 ?>
 
-<div class="productPage">
-  <div id="productTitle">
-  <!-- <h4><?php //echo str_replace('_', ' ', $type) ; ?></h4> -->
-  <h2><?php echo $title; ?></h2>
-</div>
-  <?php foreach ($fields['product_picture']['url'] as $product_picture_url): ?>
-      <?php $picture_url = $product_picture_url['picture_url'];  $thumbnail_url = $product_picture_url['thumbnail_url']; ?>  
-      <div class="productTitleDetailPageThumb"><a href="#"><img src="<?php echo $thumbnail_url; ?>" onClick="MM_swapImage('stage','','<?php echo $picture_url; ?>',1)"/></a></div>
-  <?php endforeach; ?>
-</div>
-
-<div id="productPictureMapContainer" class="row">
-   <div id="productPictureInnerContainer" class="col-xs-12 col-md-6 col-md-height  vcenter">  
-      <img src="<?php echo $fields['product_picture']['url'][0]['picture_url']; ?>" name="stage" id="stage" />
-  </div><!--
---><div id="productPictureDescContainer"  class="col-xs-12 col-md-6 col-md-height  vcenter">
-    <div id="card">
-      <div id="card-inner">
-        <div class="productTitleDetailPageThumbContainerUnder row">
-          <?php foreach ($fields['product_picture']['url'] as $product_picture_url): ?>
-              <?php $picture_url = $product_picture_url['picture_url'];  $thumbnail_url = $product_picture_url['thumbnail_url']; ?>  
-              <div class="productTitleDetailPageThumb col-xs-2">
-                <a href="javascript:void(0)"><img src="<?php echo $thumbnail_url; ?>" width="100%" onClick="MM_swapImage('stage','','<?php echo $picture_url; ?>',1)"/></a>
-              </div>
-          <?php endforeach; ?>
-        </div> 
-        <div id="productRetailInfoContainer">
-          <ul>        
-            <?php foreach ($product_informations as $value): ?>
-              <?php if(isset($fields[$value])): ?> 
-                <li><span><?php echo $fields[$value]['label']; ?>:</span> <?php echo $fields[$value]['value']; ?></li>  
-              <?php endif; ?>          
-            <?php endforeach; ?>  
-          </ul>
-        </div>      
-      </div>      
+<div id="containerProductPage">
+  <div class="row" id="productHeader">
+    <div class="col-xs-6">
+      <img class="img-responsive" src="<?php echo $fields['product_main_picture']['url'][0]['picture_url']; ?>" alt="Main Picture"/>
+    </div>
+    <div class="col-xs-6">
+      <div id="productTitle">
+        <!-- <h4><?php //echo str_replace('_', ' ', $type) ; ?></h4> -->
+        <h2><?php echo $title; ?></h2>
+      </div>
+      <div id="includes">
+        <b>includes</b>
+        <br />
+        <?php echo $fields['contents']['value']; ?>
+      </div>
+      <div id="store-link">
+        <h3>Where to Buy</h3>
+        <?php foreach ($fields['store_link']['value'] as $item): ?>
+            <?php $store_link = field_collection_field_get_entity($item); ?> 
+            <a href="<?php echo $store_link->field_store_link_url['und']['0']['value'] ?>">
+            <?php echo $store_link->field_store_link_name['und']['0']['value'] ?>
+            </a>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="productDetail">
+    <div class="col-xs-12">
+      <img class="img-responsive" src="<?php echo $fields['product_detail_picture']['url'][0]['picture_url'];  ?>" />
+    </div>
+  </div>  
+  <div class="row" id="doll-collection">  
+  <?php 
+    $doll = field_collection_field_get_entity($fields['doll']['value'][0]); 
+    $doll_name = $doll->field_doll_name['und'][0]['value'];
+    $doll_portrait_url = file_create_url($doll->field_doll_portrait['und'][0]['uri']);
+  ?> 
+    <div class="col-xs-12">
+      <div class="pull-right" id="doll-portrait">
+        <img class="img-responsive" src="<?php echo $doll_portrait_url;  ?>" alt="Doll Portrait" />
+      </div>
+      <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
+      <div id="doll-qa">
+        <?php $doll_qas = $doll->field_doll_qa['und']; ?>
+        <ul>
+          <?php foreach ($doll_qas as $item): ?>
+            <?php 
+              $qa = field_collection_field_get_entity($item); 
+              $qa_question = $qa->field_doll_qa_question['und'][0]['value'];
+              $qa_answer = $qa->field_doll_qa_answer['und'][0]['value'];
+            ?> 
+            <li><h3><?php echo $qa_question; ?></h3><?php echo $qa_answer; ?></li>
+          <?php endforeach; ?> 
+        </ul>
+        
+      </div>
     </div>    
   </div> 
 </div>
-<div id="productDescriptionContainer">
-  <h3>DESCRIPTION</h3>  
-  <div id="description" class="drop-cap">
-    <?php echo $fields['descriptive_text']['value']; ?>
-  </div> 
-  <h3>CHARACTERISTICS</h3>
-  <div class="productSpecsContainer">
-    <table class="table">      
-      <?php foreach ($animal_specifications as $value): ?>
-        <?php if(isset($fields[$value]['value'])): ?>
-        <tr>
-          <td class="listTitle"><span class="listSubTitleSpan"><?php echo $fields[$value]['label']; ?></span> </td>
-          <td class="listValue"><?php echo $fields[$value]['value']; ?></td>
-        </tr>
-        <?php endif; ?>       
-      <?php endforeach; ?>      
-    </table>    
-  </div>
-  <div id="productFactsContainer">
-    <div class="productHabitatContainer">
-    <span class="listSubTitleSpan"><?php echo $fields['natural_habitat']['label']; ?></span>
-      <ol>
-        <?php foreach($fields['natural_habitat']['value'] as $natural_habitat_value): ?>
-          <li><span><?php echo $natural_habitat_value['value']; ?></span></li>
-        <?php endforeach; ?>
-      </ol>
-    </div>       
-  </div>
-</div>
-<?php if(isset($fields['habitat_map'])): ?>
-  <div id="productPictureMapContainer2">
-    <img src="<?php echo $fields['habitat_map']['url'][0]['picture_url']; ?>" style="width:100%;">
-  </div>
-<?php endif; ?>
 <div id="crossSellingContainer">
   <div class="crossSellTitleRuler"></div>
-  <div class="crossSellTitle">ITEMS FROM THE SAME COLLECTION</div>
+  <div class="crossSellTitle">Meet my friends</div>
   <div class="crossSellTitleRuler"></div>
 
   <div class="crossSellingThumbContainer"> 

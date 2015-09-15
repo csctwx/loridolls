@@ -367,15 +367,19 @@ body > #container , #containerHomepage,
   max-width: 1234px;
 }
 
-body > #container , #containerHomepage{
+#container , 
+#containerHomepage,
+#containerProductPage{
   max-width: 900px;
   margin-bottom: 20px !important;
   background-color: transparent;
   padding: 20px 0;
 }
 
-
-
+#containerProductPage {
+  background-image: url('../images/lori-white-box.png');
+  min-height: 100px;
+}
 
 body.node-type-north-american-animals #container,
 body.node-type-dinosaurs #container,

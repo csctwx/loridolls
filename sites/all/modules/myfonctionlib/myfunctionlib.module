@@ -41,9 +41,13 @@ function myfunctionlib_get_fields($content){
                     }
     				
     			}
+                elseif (($value['#field_type'] == 'field_collection')) {
+                    $field_value = $value['#items'];
+                   // $fields[$field_name] = $value['#items'];
+                }
     		}
     		elseif ($field == 'body') {
-    			$field_name = 'descriptive_text';
+    			$field_name = 'contents';
     			$field_value = $value['#items'][0]['safe_value'];
     		}
 
@@ -179,36 +183,36 @@ function myfunctionlib_set_breadcrumbs($category, $taxonomy){
 }
 
 function myfunctionlib_get_other_products($type, $current_nid){
-    // global $base_url;
-    // $entities = (new EntityFieldQuery)->entityCondition("entity_type", "node")->entityCondition("bundle", $type)->execute();
-    // $other_products = array();
-    // $n = 0;
+    global $base_url;
+    $entities = (new EntityFieldQuery)->entityCondition("entity_type", "node")->entityCondition("bundle", $type)->execute();
+    $other_products = array();
+    $n = 0;
     
-    // $rand_keys = array();
-    // if (count($entities['node']) > 5) {
-    //     $rand_keys = array_rand($entities['node'],5);
-    // }
-    // else{
-    //     $rand_keys = array_keys($entities['node']);
-    // }
-    // //kpr($rand_keys); die();
-    // foreach ($rand_keys as $id) {
-    //   if($id != $current_nid){        
-    //     $n++;
-    //     if($n > 4){
-    //         break;
-    //     }
-    //     $product = node_load($id); 
-    //     $title = $product->title;
-    //     $product_url = $product->field_product_picture['und'][0]['uri'];        
-    //     $thumbnail_url = image_style_url("thumbnail", $product_url);
-    //     $url = $base_url.'/'.drupal_get_path_alias('node/'.$id);           
-    //     $other_products[$id] = array('title'=>$title,
-    //                                   'thumbnail_url'=>$thumbnail_url,
-    //                                   'url' => $url);
-    //   }
-    // }
-    // return $other_products;
+    $rand_keys = array();
+    if (count($entities['node']) > 5) {
+        $rand_keys = array_rand($entities['node'],5);
+    }
+    else{
+        $rand_keys = array_keys($entities['node']);
+    }
+    //kpr($rand_keys); die();
+    foreach ($rand_keys as $id) {
+      if($id != $current_nid){        
+        $n++;
+        if($n > 4){
+            break;
+        }
+        $product = node_load($id); 
+        $title = $product->title;
+        $product_url = $product->field_product_picture['und'][0]['uri'];        
+        $thumbnail_url = image_style_url("thumbnail", $product_url);
+        $url = $base_url.'/'.drupal_get_path_alias('node/'.$id);           
+        $other_products[$id] = array('title'=>$title,
+                                      'thumbnail_url'=>$thumbnail_url,
+                                      'url' => $url);
+      }
+    }
+    return $other_products;
 }
 
 function myfunctionlib_remove_width( $html ) {
