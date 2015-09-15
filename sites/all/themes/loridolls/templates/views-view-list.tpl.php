@@ -10,16 +10,33 @@
  */
 ?>
 <div class="thumbPageContainer row fashion-dolls"> 
-   
-      <!-- <div class="<?php print $classes_array[$id]; ?> item"> -->
-      	<div class="grid grid--images" data-js-module="imagesloaded-progress">
+     <div class="grid js-masonry" data-masonry-options="{ &quot;columnWidth&quot;: 200, &quot;gutter&quot;: 10  }">
+      	<?php foreach ($rows as $id => $row): ?>
+	        <?php print $row; ?> 
+	        	<!-- <img src="http://i.imgur.com/bwy74ok.jpg"> -->
+	    <?php endforeach; ?>
+      <!-- <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item grid-item--width2 grid-item--height2"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div> -->
+    </div>
+</div>
+
+
+      <!-- <div class="<?php //print $classes_array[$id]; ?> item"> -->
+      	<!-- <div class="grid grid--images" data-js-module="imagesloaded-progress">
 	      <div class="grid-sizer"></div>
-	      <?php foreach ($rows as $id => $row): ?>
+	      <?php //foreach ($rows as $id => $row): ?>
 	      <div class="grid-image-item">
-	        <?php print $row; ?>
+	        <?php //print $row; ?> -->
 	        <!-- <img src="http://i.imgur.com/bwy74ok.jpg"> -->
-	      </div>
-	      <?php endforeach; ?>
+	      <!-- </div>
+	      <?php //endforeach; ?> -->
 	      <!-- <div class="grid-image-item">
 	        <img src="http://i.imgur.com/bAZWoqx.jpg">
 	      </div>
@@ -44,7 +61,7 @@
 	      <div class="grid-image-item">
 	        <img src="http://i.imgur.com/UORFJ3w.jpg">
 	      </div> -->
-	    </div>
+	    <!-- </div> -->
         <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
           <div class="thumbnail"></div>
         </div> -->

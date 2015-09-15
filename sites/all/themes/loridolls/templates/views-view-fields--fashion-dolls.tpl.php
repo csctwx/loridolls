@@ -31,10 +31,18 @@
 if(isset($fields['field_product_picture'])){
 		$content = strip_tags($fields['field_product_picture']->content, '<a> <img>');
 		$content = myfunctionlib_remove_width( $content );
-	  // kpr($content); die();
-	     print $content;
-	  } 
 
-
+		$size = strip_tags($fields['field_product_picture_size']->content);
+	  // kpr($size); die();
+	  	if($size == 3){
+	  		print "<div class='grid-item  grid-item--width2 grid-item--height2'>".$content."</div>";
+	  	}
+	  	elseif($size == 2){
+	  		print "<div class='grid-item  grid-item--width2'>".$content."</div>";
+	  	}
+	  	else{
+	  		print "<div class='grid-item'>".$content."</div>";
+	  	}
+	  }
 ?>
 
