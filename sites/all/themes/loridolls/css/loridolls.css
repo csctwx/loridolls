@@ -293,6 +293,7 @@ a.right.carousel-control img {
   padding: 0;
   color: #b2469a;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  text-transform: none;
 }
 
 
@@ -377,8 +378,26 @@ body > #container , #containerHomepage,
 }
 
 #containerProductPage {
-  background-image: url('../images/lori-white-box.png');
+  background-image: url('../images/product-page-contentBox-top.png');
   min-height: 100px;
+}
+
+#containerProductPage {
+    position: relative;
+    z-index: 2;
+    background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
+                url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
+}
+
+#containerProductPage:before {
+    content: '';
+    position: absolute;
+    z-index: -1; /* push it to the background */
+    top: 30px; /* position it off the top background */
+    right: 0;
+    bottom: 30px; /* position it off the bottom background */
+    left: 0;
+    background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
 }
 
 body.node-type-north-american-animals #container,
@@ -1345,4 +1364,20 @@ a.home{
   height: 180px;
   background: #F90;
   z-index: 2; /* keep it above other items */
+}
+
+.grid-item span{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(243,137,175,0.5);
+  font-size: 24px;
+  width: 100%;
+  color: white;
+}
+
+.grid-item span a,
+.grid-item span a:hover{
+  color: white;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
