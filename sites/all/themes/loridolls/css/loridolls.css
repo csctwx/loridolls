@@ -387,15 +387,16 @@ body > #container , #containerHomepage,
     z-index: 2;
     background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
                 url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
+    background-size: contain, contain;                
 }
 
 #containerProductPage:before {
     content: '';
     position: absolute;
     z-index: -1; /* push it to the background */
-    top: 30px; /* position it off the top background */
+    top: 2%; /* position it off the top background */
     right: 0;
-    bottom: 30px; /* position it off the bottom background */
+    bottom: 2%; /* position it off the bottom background */
     left: 0;
     background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
 }
@@ -1380,4 +1381,24 @@ a.home{
 .grid-item span a:hover{
   color: white;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+#containerProductPage{
+  color:#b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+#containerProductPage h2{
+  font-size: 24px;
+  margin-bottom: 2%;
+}
+
+#containerProductPage h3{
+  font-size: 20px;
+  margin: 2% auto;
+}
+
+
+#flourish{
+  margin-top:3%;
 }

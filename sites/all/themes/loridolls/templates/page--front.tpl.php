@@ -9,9 +9,9 @@
     </div>
     <div class="slider-wrapper theme-default slideshowNarrow">
         <div id="sliderTwo" class="nivoSlider">
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/iphone-crop-slideshow-african.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/iphone-crop-slideshow-fantasy.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/iphone-crop-slideshow-north-american.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide2.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide3.jpg'); ?>" alt="" /></a>
         </div>
     </div>
 </div>

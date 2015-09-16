@@ -25,12 +25,11 @@
 
 <div id="containerProductPage">
   <div class="row" id="productHeader">
-    <div class="col-xs-6">
+    <div class="col-xs-6 vcenter">
       <img class="img-responsive" src="<?php echo $fields['product_main_picture']['url'][0]['picture_url']; ?>" alt="Main Picture"/>
-    </div>
-    <div class="col-xs-6">
+    </div><!-- 
+ --><div class="col-xs-6 vcenter">
       <div id="productTitle">
-        <!-- <h4><?php //echo str_replace('_', ' ', $type) ; ?></h4> -->
         <h2><?php echo $title; ?></h2>
       </div>
       <div id="includes">
@@ -38,12 +37,15 @@
         <br />
         <?php echo $fields['contents']['value']; ?>
       </div>
+      <br />
+      <div id="flourish"><img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" /></div>
       <div id="store-link">
         <h3>Where to Buy</h3>
         <?php foreach ($fields['store_link']['value'] as $item): ?>
             <?php $store_link = field_collection_field_get_entity($item); ?> 
             <a href="<?php echo $store_link->field_store_link_url['und']['0']['value'] ?>">
-            <?php echo $store_link->field_store_link_name['und']['0']['value'] ?>
+            <?php //echo $store_link->field_store_link_name['und']['0']['value'] ?>
+            <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/target.png'); ?>" />
             </a>
         <?php endforeach; ?>
       </div>
