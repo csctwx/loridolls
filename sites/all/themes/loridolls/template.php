@@ -1,7 +1,8 @@
 <?php
 function loridolls_preprocess_page(&$vars, $hook) { 
   // Add js file in front page
-  if ($vars['is_front']) {
+  $slide_types = array('fashion_dolls');
+  if ($vars['is_front'] || in_array($vars['node']->type, $slide_types)) {
     drupal_add_js(path_to_theme().'/nivo-slider/demo/scripts/jquery-1.11.1.min.js');    
     drupal_add_js(path_to_theme().'/nivo-slider/jquery.nivo.slider.js');
     drupal_add_js(path_to_theme().'/nivo-slider/script.js');
