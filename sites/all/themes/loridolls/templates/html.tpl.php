@@ -88,12 +88,8 @@
                   <h2 class="mp-back">back <b class="pull-right">&gt;</b></h2>
                   <ul>
                     <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
-                    <li>
-                      <a href="#">Ballerinas</a>
-                    </li>
-                    <li>
-                      <a href="#">Pets &amp; Dolls</a>
-                    </li>
+                    <li><?php print l(t('Ballerinas'), '/ballerinas', array('attributes' => array('class' => 'ballerinas'))); ?></li>
+                    <li><?php print l(t('Pets & Dolls'), '/pets-dolls', array('attributes' => array('class' => 'pets-dolls'))); ?></li>
                   </ul>
                 </div>
               </li>
@@ -141,8 +137,8 @@
                       <li class='active has-sub'><?php print l(t('Dolls'), '/Dolls', array('attributes' => array('class' => 'dolls'))); ?>
                         <ul>
                            <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
-                           <li><?php print l(t('Ballerinas'), '/fantasy-sets', array('attributes' => array('class' => 'fantasy'))); ?></li>
-                           <li><?php print l(t('Pets & Dolls'), '/north-american-animals', array('attributes' => array('class' => 'american'))); ?></li>
+                           <li><?php print l(t('Ballerinas'), '/ballerinas', array('attributes' => array('class' => 'ballerinas'))); ?></li>
+                           <li><?php print l(t('Pets & Dolls'), '/pets-dolls', array('attributes' => array('class' => 'pets-dolls'))); ?></li>
                         </ul>
                       </li>
                       <li class='has-sub'><?php print l(t('Accessories'), '/accessories', array('attributes' => array('class' => 'accessories'))); ?>

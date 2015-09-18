@@ -169,6 +169,10 @@ function myfunctionlib_set_breadcrumbs($category, $taxonomy){
 
     if($category) {
         $category_title = ucfirst(str_replace('_', ' ', $category));
+        // kpr($category_title); die();
+        if($category_title=='Pets dolls') {
+            $category_title='Pets & Dolls';
+        }
         $category_path = str_replace('_', '-', $category);
         $breadcrumb[] = l($category_title, $category_path);
     }   
@@ -186,13 +190,13 @@ function myfunctionlib_get_other_products($type, $current_nid){
     }
     $other_products = array();
     $n = 0;
-    //kpr($nids); die();
+    // kpr($nids); die();
     $rand_keys = array();
     if (count($nids) > 5) {
         $rand_keys = array_rand($nids,5);
     }
     else{
-        $rand_keys = array_rand($nids);
+        $rand_keys = array_keys($nids);
     }
     //kpr($rand_keys); die();
     foreach ($rand_keys as $id_key) {

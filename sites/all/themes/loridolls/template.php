@@ -1,7 +1,7 @@
 <?php
 function loridolls_preprocess_page(&$vars, $hook) { 
   // Add js file in front page
-  $slide_types = array('fashion_dolls');
+  $slide_types = array('fashion_dolls','ballerinas','pets_dolls');
   if ($vars['is_front'] || in_array($vars['node']->type, $slide_types)) {
     drupal_add_js(path_to_theme().'/nivo-slider/demo/scripts/jquery-1.11.1.min.js');    
     drupal_add_js(path_to_theme().'/nivo-slider/jquery.nivo.slider.js');
@@ -12,12 +12,15 @@ function loridolls_preprocess_page(&$vars, $hook) {
   
   // modify breadcrumbs if it is view page or node type belong to categories
   $dolls_node_ids = taxonomy_select_nodes(2);
-  //kpr($figurines_node_ids); die();
   $dolls_types = array();
   foreach ($dolls_node_ids as $dolls_node_id) {
     $dolls_node = node_load($dolls_node_id);
-    $dolls_types[] = str_replace(' ', '_', strtolower($dolls_node->title));
+    $dolls_type = str_replace(' ', '_', strtolower($dolls_node->title));
+    $dolls_type = str_replace('_&_', '_', $dolls_type);
+    $dolls_types[] = $dolls_type;
   }
+
+  // kpr($dolls_types); die();
   $views_page = views_get_page_view();
   if (is_object($views_page)) {    
     $view_name = $views_page->name; 
@@ -58,7 +61,8 @@ function loridolls_menu_link(array $variables) {
 }
 
 function loridolls_breadcrumb($variables) {
-  $breadcrumb = $variables['breadcrumb'];
+  $breadcrumb = $variables['breadcrumb']; 
+  // kpr($breadcrumb); die();
   if (!empty($breadcrumb)) {
     // Adding the title of the current page to the breadcrumb.
     $breadcrumb[] = drupal_get_title();

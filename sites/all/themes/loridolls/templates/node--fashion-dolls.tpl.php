@@ -2,23 +2,6 @@
   //Create field variables 
   $fields = myfunctionlib_get_fields($content);  
   
-  //extract($fields);  
-  $animal_specifications = array('full_name',
-                            'name_means', 
-                            'period', 
-                            'order', 
-                            'suborder',
-                            'diet',
-                            'size',
-                            'weight',
-                            'discoverer',
-                           ); 
-  $product_informations = array('product_no', 
-                            'age_grade', 
-                            'measurements', 
-                            'piece_count',                            
-                          );
-
   $other_products = myfunctionlib_get_other_products($type, $node->nid);                  
   // kpr($other_products); die();
 ?>
@@ -50,22 +33,16 @@
         <?php endforeach; ?>
       </div>
     </div>
-  </div>
-  <?php //kpr($fields['product_detail_picture']); die(); ?>
+  </div>  
   <div class="row" id="productDetail">
     <div class="col-xs-12">
-
-    <div class="slider-wrapper theme-default slideshowWide">
-        <div id="slider" class="nivoSlider">
-            <?php foreach ($fields['product_detail_picture']['url'] as $detail_picture): ?>
-               <img class="img-responsive" src="<?php echo $detail_picture['picture_url'];  ?>" />
-            <?php endforeach; ?>   
-<!--             <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide2.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide3.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="" /></a>
- -->        </div>
-    </div>
-      
+      <div class="slider-wrapper theme-default slideshowWide">
+          <div id="slider" class="nivoSlider">
+              <?php foreach ($fields['product_detail_picture']['url'] as $detail_picture): ?>
+                 <img class="img-responsive" src="<?php echo $detail_picture['picture_url'];  ?>" />
+              <?php endforeach; ?>   
+          </div>
+      </div>
     </div>
   </div>  
   <div class="row" id="doll-collection">  
@@ -97,30 +74,31 @@
   </div> 
 </div>
 <div id="crossSellingContainer">
-  <div class="crossSellTitle"><h3>Meet my friends</h3></div>
-  
-  <div class="crossSellingThumbContainer"> 
-    <div class="thumbPageContainer row"> 
-      <?php if(isset($other_products)): ?>
-        <?php foreach ($other_products as $index => $product):?>  
-          <div class="item">
-            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-              <div class="thumbnail" >  
-                <div class="views-field views-field-field-product-picture">        
-                  <div class="field-content"><a href="<?php echo $product['url']; ?>">
-                    <img typeof="foaf:Image" src="<?php echo $product['thumbnail_url']; ?>" width="160" height="160" alt=""></a>
+  <?php if(!empty($other_products)): ?>
+    <div class="crossSellTitle"><h3>Meet my friends</h3></div>
+    <div class="crossSellingThumbContainer"> 
+      <div class="thumbPageContainer row"> 
+        <?php if(isset($other_products)): ?>
+          <?php foreach ($other_products as $index => $product):?>  
+            <div class="item">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail" >  
+                  <div class="views-field views-field-field-product-picture">        
+                    <div class="field-content"><a href="<?php echo $product['url']; ?>">
+                      <img typeof="foaf:Image" src="<?php echo $product['thumbnail_url']; ?>" width="160" height="160" alt=""></a>
+                    </div>  
                   </div>  
-                </div>  
-                <div class="views-field views-field-title">        
-                  <span class="field-content">
-                    <a href="<?php echo $product['url']; ?>"><?php echo $product['title']; ?></a>
-                  </span>  
-                </div>
-               </div>
+                  <div class="views-field views-field-title">        
+                    <span class="field-content">
+                      <a href="<?php echo $product['url']; ?>"><?php echo $product['title']; ?></a>
+                    </span>  
+                  </div>
+                 </div>
+              </div>
             </div>
-          </div>
-        <?php endforeach; ?>      
-      <?php endif; ?>         
+          <?php endforeach; ?>      
+        <?php endif; ?>         
+      </div>
     </div>
-  </div>
+  <?php endif; ?>
 </div>
