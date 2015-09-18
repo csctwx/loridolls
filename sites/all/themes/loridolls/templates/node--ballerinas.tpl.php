@@ -82,7 +82,7 @@
                 <div class="thumbnail" >  
                   <div class="views-field views-field-field-product-picture">        
                     <div class="field-content"><a href="<?php echo $product['url']; ?>">
-                      <img typeof="foaf:Image" src="<?php echo $product['thumbnail_url']; ?>" width="160" height="160" alt=""></a>
+                      <img typeof="foaf:Image" src="<?php echo $product['thumbnail_url']; ?>" width="166" height="166" alt=""></a>
                     </div>  
                   </div>  
                   <div class="views-field views-field-title">        

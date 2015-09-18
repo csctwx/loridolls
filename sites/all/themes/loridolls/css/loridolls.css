@@ -408,8 +408,13 @@ body > #container , #containerHomepage,
 
 #containerProductPage > .row {
   max-width: 740px;
-  width: 80%;
+  width: 90%;
   margin: 50px auto;
+}
+
+#containerProductPage .col-xs-12{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #containerProductPage {
@@ -706,7 +711,7 @@ body.node-type-wild-animals #container {
 }*/
 
 .thumbPageContainer .thumbnail{
-  width: 100%;
+  width: 166px;
   margin:0 auto 30% auto;
 }
 
@@ -1058,6 +1063,7 @@ table.thumbPageContainer td input[type=button] {
 
 .crossSellingThumbContainer{
   padding: 0;
+  width: 80%;
 }
 
 ul#sidebar-list-2 {
@@ -1500,3 +1506,6 @@ a.home{
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
+#productDetail .theme-default .nivoSlider{
+  box-shadow: none;
+}
