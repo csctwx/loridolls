@@ -13,13 +13,15 @@
 
 
 <div class="thumbPageContainer dolls"> 
-   <?php foreach ($rows as $id => $row): ?>
-      <div class="<?php print $classes_array[$id]; ?> item">
-        <div class="row row-centered">
-          <div><?php print $row; ?></div>
-        </div>
-      </div>
-  <?php endforeach; ?>
+	<div class="grid">
+		<?php foreach ($rows as $id => $row): ?>
+		      <div class="<?php print $classes_array[$id]; ?> item">
+		        <div class="row row-centered">
+		          <div><?php print $row; ?></div>
+		        </div>
+		      </div>
+		<?php endforeach; ?>
+	</div>
 </div>
 
 

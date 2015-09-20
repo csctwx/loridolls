@@ -217,7 +217,7 @@ body {
 .views-field-title a:visited{
   display: block;
   color:white;
-  font-family: 'Novecento-DemiBold', Arial, Helvetica, sans-serif;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
   font-size: 11px !important;
   text-transform: uppercase;
   text-align: center;
@@ -275,17 +275,18 @@ a.right.carousel-control img {
 
 #productTitleDetailPage {
     width:85%; 
-    margin: 0 auto;    
+    margin: 0 auto 30px;    
 }
 
 #breadcrumb {
     width:85%; 
-    margin: 0 auto;   
+    margin: 30px auto 0;   
 }
 
 #container > .view {
     width:100%; 
-    margin: 0 auto;
+    margin: 0 auto 80px;
+    max-width: 930px;
 }
 
 .view .thumbPageContainer {
@@ -384,7 +385,7 @@ body.node-type-dinosaurs #productTitleDetailPageDino {
 @media (min-width: 992px){
   #container { 
     padding: 15px 6px;
-    border-image-width: 19px; 
+    border-image-width: 0; 
   }
 }
 
@@ -400,16 +401,26 @@ body > #container , #containerHomepage,
 #container , 
 #containerHomepage,
 #containerProductPage{
-  max-width: 900px;
-  margin-bottom: 20px !important;
+  max-width: 960px;
+  margin-bottom: 30px !important;
   background-color: transparent;
-  padding: 20px 0;
+  padding: 0;
+  border: 0;
+}
+
+#categoryPicture{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #containerProductPage > .row {
   max-width: 740px;
   width: 90%;
-  margin: 50px auto;
+  margin: 30px auto;
+}
+
+#containerProductPage > .row#doll-collection{
+  margin-top:100px;
 }
 
 #containerProductPage .col-xs-12{
@@ -425,6 +436,15 @@ body > #container , #containerHomepage,
 #containerProductPage {
     position: relative;
     z-index: 2;
+    background: url('../images/lori-white-box.png') top left no-repeat;
+    background-size: 100% 100%; 
+    padding-top: 10px;
+    padding-bottom:50px;               
+}
+
+/*#containerProductPage {
+    position: relative;
+    z-index: 2;
     background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
                 url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
     background-size: contain, contain;                
@@ -433,13 +453,13 @@ body > #container , #containerHomepage,
 #containerProductPage:before {
     content: '';
     position: absolute;
-    z-index: -1; /* push it to the background */
-    top: 2%; /* position it off the top background */
+    z-index: -1; 
+    top: 2%; 
     right: 0;
-    bottom: 2%; /* position it off the bottom background */
+    bottom: 2%; 
     left: 0;
     background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
-}
+}*/
 
 body.node-type-north-american-animals #container,
 body.node-type-dinosaurs #container,
@@ -810,11 +830,43 @@ body.node-type-wild-animals #container {
   }
 }
 
-.view-content .thumbPageContainer{
+/*.view-content .thumbPageContainer{
   margin-top: 1% !important;
-  padding-top: 0;
-  max-width: 830px;
+  padding: 50px;
+  max-width: 930px;
+  background: url('../images/lori-white-box.png') left top no-repeat;
+  background-size: 100% 100%;
+}*/
+
+.view-content {
+  position: relative;
 }
+
+.view-content .thumbPageContainer {
+    position: relative;
+    padding: 3.5% 0;
+    z-index: 2;
+    background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
+                url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
+    background-size: contain, contain;                
+}
+
+.view-content .thumbPageContainer .grid{
+  background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
+  background-size: contain;
+  padding: 1.5% 5%;
+}
+
+/*.view-content .thumbPageContainer:before {
+    content: '';
+    position: absolute;
+    z-index: -1; 
+    top: 2%; 
+    right: 0;
+    bottom: 2%; 
+    left: 0;
+    background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
+}*/
 
 #bottomFooterContainer a {
   color: cornsilk;
