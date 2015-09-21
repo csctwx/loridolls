@@ -857,6 +857,10 @@ body.node-type-wild-animals #container {
   padding: 1.5% 5%;
 }
 
+.view-content .thumbPageContainer .grid .views-field-field-category-mobile-picture {
+  display: none;
+}
+
 /*.view-content .thumbPageContainer:before {
     content: '';
     position: absolute;
@@ -1361,6 +1365,24 @@ a.home{
 
   #header {
     background-image: url("../images/lori_header_mini-mobile.png");
+  }
+
+  .view-content .thumbPageContainer,
+  .view-content .thumbPageContainer .grid {
+    background: none;
+    padding: 0;
+  }
+
+  .view-content .thumbPageContainer .grid .views-field-field-category-picture {
+    display: none;
+  }
+
+  .view-content .thumbPageContainer .grid .views-field-field-category-mobile-picture {
+    display: block;
+  }
+
+  .view-content .thumbPageContainer .grid .views-field-field-category-mobile-picture img {
+    margin: 0 auto;
   }
     
 }
