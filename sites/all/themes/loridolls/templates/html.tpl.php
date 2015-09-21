@@ -55,7 +55,7 @@
       $('.carousel[data-type="multi"] .item .thumbnail img').addClass('img-responsive');  
 
       //modify view dolls' link destination
-      $('.dolls .field-content a').each(function(){
+      $('.section .field-content a').each(function(){
         var title = $(this).attr('href').replace(/content\//g,'').toLowerCase();
         // $(this).find('a').each(function(){
           console.log(title);
@@ -98,18 +98,10 @@
                 <div class="mp-level">
                   <h2 class="mp-back">back <b class="pull-right">&gt;</b></h2>
                   <ul>
-                    <li>
-                      <a href="#">Fashion Outfits</a>
-                    </li>
-                    <li>
-                      <a href="#">Fashion Accessories</a>
-                    </li>
-                    <li>
-                      <a href="#">Urban Living</a>
-                    </li>
-                    <li>
-                      <a href="#">Weekend Gateway</a>
-                    </li>
+                    <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'fashion-outfits'))); ?></li>
+                    <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fashion-accessories', array('attributes' => array('class' => 'fashion-accessories'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Urban Living'), '/urban-living', array('attributes' => array('class' => 'urban-living'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Weekend Gateway'), '/weekend-gateway', array('attributes' => array('class' => 'weekend-gateway'))); ?></li>
                   </ul>
                 </div>
               </li>              
@@ -143,10 +135,10 @@
                       </li>
                       <li class='has-sub'><?php print l(t('Accessories'), '/accessories', array('attributes' => array('class' => 'accessories'))); ?>
                         <ul>
-                           <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'dinosaurs'))); ?></li>
-                           <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fantasy-sets', array('attributes' => array('class' => 'fantasy'))); ?></li>
-                           <li class='has-sub'><?php print l(t('Urban Living'), '/north-american-animals', array('attributes' => array('class' => 'american'))); ?></li>
-                           <li class='has-sub'><?php print l(t('Weekend Gateway'), '/wild-animals', array('attributes' => array('class' => 'wild'))); ?></li>
+                           <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'fashion-outfits'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fashion-accessories', array('attributes' => array('class' => 'fashion-accessories'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Urban Living'), '/urban-living', array('attributes' => array('class' => 'urban-living'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Weekend Gateway'), '/weekend-gateway', array('attributes' => array('class' => 'weekend-gateway'))); ?></li>
                         </ul>
                       </li>
                       <li><?php print l(t('Videos'), '/categories', array('attributes' => array('class' => 'figurines'))); ?>

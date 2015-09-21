@@ -12,7 +12,7 @@
 
 
 
-<div class="thumbPageContainer dolls"> 
+<div class="thumbPageContainer section"> 
 	<div class="grid">
 		<?php foreach ($rows as $id => $row): ?>
 		      <div class="<?php print $classes_array[$id]; ?> item">

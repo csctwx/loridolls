@@ -1,7 +1,13 @@
 <?php
 function loridolls_preprocess_page(&$vars, $hook) { 
   // Add js file in front page
-  $slide_types = array('fashion_dolls','ballerinas','pets_dolls');
+  $slide_types = array('fashion_dolls',
+                      'ballerinas',
+                      'pets_dolls',
+                      'fashion_outfits',
+                      'fashion_accessories',
+                      'urban_living',
+                      'weekend_gateway');
   if ($vars['is_front'] || in_array($vars['node']->type, $slide_types)) {
     drupal_add_js(path_to_theme().'/nivo-slider/demo/scripts/jquery-1.11.1.min.js');    
     drupal_add_js(path_to_theme().'/nivo-slider/jquery.nivo.slider.js');
@@ -11,8 +17,10 @@ function loridolls_preprocess_page(&$vars, $hook) {
   $vars['scripts'] = drupal_get_js();  
   
   // modify breadcrumbs if it is view page or node type belong to categories
-  $dolls_node_ids = taxonomy_select_nodes(2);
+  $dolls_node_ids = taxonomy_select_nodes(2); 
+  $accessories_node_ids = taxonomy_select_nodes(1); 
   $dolls_types = array();
+  $accessories_types = array();
   foreach ($dolls_node_ids as $dolls_node_id) {
     $dolls_node = node_load($dolls_node_id);
     $dolls_type = str_replace(' ', '_', strtolower($dolls_node->title));
@@ -20,19 +28,29 @@ function loridolls_preprocess_page(&$vars, $hook) {
     $dolls_types[] = $dolls_type;
   }
 
+  foreach ($accessories_node_ids as $accessories_node_id) {
+    $accessories_node = node_load($accessories_node_id);
+    $accessories_types[] = str_replace(' ', '_', strtolower($accessories_node->title));    
+  }
+
+
+
   // kpr($dolls_types); die();
   $views_page = views_get_page_view();
   if (is_object($views_page)) {    
     $view_name = $views_page->name; 
     if(in_array($view_name, $dolls_types)){
       myfunctionlib_set_breadcrumbs('', 'dolls');
-    }    
+    }
+    elseif(in_array($view_name, $accessories_types)){
+      myfunctionlib_set_breadcrumbs('', 'accessories');
+    }       
   }
 
   $node_type = $vars['node']->type;  
   if($node_type){ 
-    if($node_type == 'accessories') {
-      myfunctionlib_set_breadcrumbs('', 'accessories');
+    if(in_array($node_type, $accessories_types)) {
+      myfunctionlib_set_breadcrumbs($node_type, 'accessories');
     }
     elseif(in_array($node_type, $dolls_types)){      
         myfunctionlib_set_breadcrumbs($node_type, 'dolls');
