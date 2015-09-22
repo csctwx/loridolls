@@ -861,6 +861,10 @@ body.node-type-wild-animals #container {
   display: none;
 }
 
+.view-content .thumbPageContainer .grid .views-field-field-category-picture img {
+  margin: 0  auto;
+}
+
 /*.view-content .thumbPageContainer:before {
     content: '';
     position: absolute;
