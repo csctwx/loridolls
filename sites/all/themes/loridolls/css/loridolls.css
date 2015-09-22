@@ -1388,6 +1388,10 @@ a.home{
   .view-content .thumbPageContainer .grid .views-field-field-category-mobile-picture img {
     margin: 0 auto;
   }
+
+  #categoryPicture {
+    display: none;
+  }
     
 }
 
