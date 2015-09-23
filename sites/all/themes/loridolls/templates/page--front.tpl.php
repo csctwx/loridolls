@@ -16,8 +16,87 @@
     </div>
 </div>
 
-<div id="containerHomepage">
-  <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-rev1.png'); ?>">  
+<div id="containerHomepage" class="text-center">
+  <div id="welcome">
+    <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-top-rev.png'); ?>" />
+  </div>
+  <div class="grid">
+    <div id="fun-game">
+      <h2>FUN & GAMES</h2>
+      <h4>Wallpapers, coloring sheets, ...and fun galory!</h4>
+      <div class="row">
+          <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/homepage-fun_games-rev.png'); ?>" />
+      </div>
+      <div class="row">
+          <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" />
+      </div>
+    </div>
+    <div id="go-for-walk">
+      <h2>LET'S GO FOR A WALK!</h2>
+      <h4>You can meet our pet parents</h4>
+    </div>
+    <div id="crossSellingContainer">
+      <div class="crossSellingThumbContainer"> 
+        <div class="thumbPageContainer row"> 
+              <div class="item">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="thumbnail" >  
+                      <div class="field-content">
+                        <img src="<?php echo myfunctionlib_theme_path('images/homepage-dog1.png'); ?>" width="166" height="166" alt="">
+                      </div>
+                      <div class="views-field views-field-title">        
+                        <span class="field-content">Blaze
+                        </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="thumbnail" >  
+                      <div class="field-content">
+                        <img src="<?php echo myfunctionlib_theme_path('images/homepage-dog2.png'); ?>" width="166" height="166" alt="">
+                      </div>
+                      <div class="views-field views-field-title">        
+                        <span class="field-content">Happy
+                        </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="thumbnail" >  
+                      <div class="field-content">
+                        <img src="<?php echo myfunctionlib_theme_path('images/homepage-dog3.png'); ?>" width="166" height="166" alt="">
+                      </div>
+                      <div class="views-field views-field-title">        
+                        <span class="field-content">Indyana
+                        </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="thumbnail" >  
+                      <div class="field-content">
+                        <img src="<?php echo myfunctionlib_theme_path('images/homepage-dog4.png'); ?>" width="166" height="166" alt="">
+                      </div>
+                      <div class="views-field views-field-title">        
+                        <span class="field-content">Duke
+                        </span>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-bottom-rev.png'); ?>" />
+  </div>
 </div>
 <!-- <div id="crossSellingContainer">
     <div class="crossSellTitleRuler"></div>

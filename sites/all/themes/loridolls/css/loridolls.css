@@ -204,6 +204,20 @@ body {
   margin:0;
 }
 
+#containerHomepage .thumbnail .views-field-title{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  margin:0;
+  font-size: 20px;
+  color: #ee2a7b;
+}
+
+#containerHomepage .row{
+  margin: 0;
+}
+
 .thumbnail:hover{
   background-color: rgb(80,61,51);
 }
@@ -301,7 +315,9 @@ a.right.carousel-control img {
     margin: 8% auto 0;
 }
 
-#productTitleDetailPage h2, #productTitleDetailPageDino h2 {
+#containerHomepage h2,
+#productTitleDetailPage h2, 
+#productTitleDetailPageDino h2 {
   font-size: 210%;
   line-height: 1em;
   word-wrap:break-word;
@@ -311,6 +327,24 @@ a.right.carousel-control img {
   text-transform: none;
 }
 
+#containerHomepage h2 {
+  margin-top: 15px;
+}
+
+#containerHomepage h4 {
+  font-size: 100%;
+  line-height: 1em;
+  word-wrap:break-word;
+  padding: 0;
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  text-transform: none;
+  margin-bottom: 10px;
+}
+
+#containerHomepage #crossSellingContainer{
+  background-color: transparent;
+}
 
 body.node-type-dinosaurs #productTitleDetailPageDino {
     width:75%; 
@@ -406,6 +440,24 @@ body > #container , #containerHomepage,
   background-color: transparent;
   padding: 0;
   border: 0;
+}
+
+#containerHomepage .grid{
+  background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
+  background-size: contain;
+  padding: 1% 0;
+}
+
+#welcome img{
+  width: 100%;
+}
+
+#footer img{
+  width: 100%;
+}
+
+#containerHomepage img {
+  margin: 0 auto;
 }
 
 #categoryPicture{
@@ -842,20 +894,27 @@ body.node-type-wild-animals #container {
   position: relative;
 }
 
-.view-content .thumbPageContainer {
-    position: relative;
-    padding: 3.5% 0;
-    z-index: 2;
-    background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
-                url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
-    background-size: contain, contain;                
+
+.view-content .thumbPageContainer .thumbHeader img,
+.view-content .thumbPageContainer .thumbFooter img{
+  width: 100%;
+}
+
+.view-content .thumbPageContainer .thumbMiddle{
+  background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
+  background-size: contain;
+  padding: 0 3%;
+}
+
+.view-content .thumbPageContainer .thumbMiddle .row{
+  margin:0 auto;
 }
 
 .view-content .thumbPageContainer .grid{
-  background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
-  background-size: contain;
-  padding: 1.5% 5%;
+  max-width: 830px;
+  margin: 0 auto;
 }
+
 
 .view-content .thumbPageContainer .grid .views-field-field-category-mobile-picture {
   display: none;
@@ -1083,8 +1142,12 @@ table.thumbPageContainer td input[type=button] {
   margin-right: 7px;
 }
 
+.thumbnail:hover {
+  background-color: transparent;
+}
+
 .thumbnail img{
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 #sidebar.large{
@@ -1348,6 +1411,12 @@ a.home{
   z-index: 600;
 }
 
+@media screen and (max-width: 1102px){
+  .view-content .thumbPageContainer .grid {
+    max-width: 620px;
+  }
+}
+
 @media all and (max-width: 990px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
   
   #cssmenu > ul {
@@ -1372,7 +1441,7 @@ a.home{
   }
 
   .view-content .thumbPageContainer,
-  .view-content .thumbPageContainer .grid {
+  .view-content .thumbPageContainer .thumbMiddle {
     background: none;
     padding: 0;
   }
@@ -1389,10 +1458,13 @@ a.home{
     margin: 0 auto;
   }
 
-  #categoryPicture {
+  #categoryPicture,
+  .view-content .thumbPageContainer .thumbHeader img,
+  .view-content .thumbPageContainer .thumbFooter img {
     display: none;
   }
-    
+
+     
 }
 
 .mp-menu h2{
@@ -1408,6 +1480,12 @@ a.home{
 
 .mp-back{
   background-color: transparent;
+}
+
+@media screen and (max-width: 773px){
+  .view-content .thumbPageContainer .grid {
+    max-width: 410px;
+  }
 }
 
 .mp-back::after{

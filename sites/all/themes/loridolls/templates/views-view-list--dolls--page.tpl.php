@@ -13,15 +13,23 @@
 
 
 <div class="thumbPageContainer section"> 
-	<div class="grid">
-		<?php foreach ($rows as $id => $row): ?>
-		      <div class="<?php print $classes_array[$id]; ?> item">
-		        <div class="row row-centered">
-		          <div><?php print $row; ?></div>
-		        </div>
-		      </div>
-		<?php endforeach; ?>
+	<div class="thumbHeader">
+	    <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-top.png'); ?>" />
 	</div>
+	<div class="thumbMiddle">
+		<div class="grid">
+			<?php foreach ($rows as $id => $row): ?>
+			      <div class="<?php print $classes_array[$id]; ?> item">
+			        <div class="row row-centered">
+			          <div><?php print $row; ?></div>
+			        </div>
+			      </div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+	<div class="thumbFooter">
+    	<img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-bottom.png'); ?>" />
+  	</div>
 </div>
 
 
