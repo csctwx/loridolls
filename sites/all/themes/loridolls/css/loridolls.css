@@ -13,7 +13,7 @@ text-align:left !important;
     position: relative;
     /*overflow: hidden; */
     padding-top: 0; 
-    max-width: none;
+    /*max-width: none;*/
     height: 101px;
     /*width: 100%;*/
 }
@@ -1504,6 +1504,7 @@ a.home{
 
 .scroller {
   overflow-y: auto;  
+  background: url("../images/header-middle.jpg") left -1px repeat-x; 
 }
 
 .mp-pusher.mp-pushed .scroller {
