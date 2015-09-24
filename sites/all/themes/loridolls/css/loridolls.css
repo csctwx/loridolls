@@ -216,6 +216,7 @@ body {
 
 #containerHomepage .row{
   margin: 0;
+  margin-bottom: 3% !important;
 }
 
 .thumbnail:hover{
@@ -436,7 +437,7 @@ body > #container , #containerHomepage,
 #containerHomepage,
 #containerProductPage{
   max-width: 960px;
-  margin-bottom: 30px !important;
+  margin-bottom: 50px !important;
   background-color: transparent;
   padding: 0;
   border: 0;
@@ -494,24 +495,7 @@ body > #container , #containerHomepage,
     padding-bottom:50px;               
 }
 
-/*#containerProductPage {
-    position: relative;
-    z-index: 2;
-    background: url('../images/product-page-contentBox-top.png') top left no-repeat, 
-                url('../images/product-page-contentBox-bottom.png') bottom left no-repeat;
-    background-size: contain, contain;                
-}
 
-#containerProductPage:before {
-    content: '';
-    position: absolute;
-    z-index: -1; 
-    top: 2%; 
-    right: 0;
-    bottom: 2%; 
-    left: 0;
-    background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
-}*/
 
 body.node-type-north-american-animals #container,
 body.node-type-dinosaurs #container,
@@ -1240,9 +1224,11 @@ ul#sidebar-list-2 li {
 
 #footer-bg {
   width: 100%;
-  height: 100%;
+  height: 213px;
   background: transparent url("../images/lori_footer.png") repeat-x;
   margin:0;
+  position: relative;  
+  padding-top: 60px;
 }
 
 #footer-bg > .row {
@@ -1259,7 +1245,8 @@ ul#sidebar-list-2 li {
   background: transparent url("../images/footer-redhead-doll.png") no-repeat;
   z-index: 999;
   bottom: 0;
-  right: 13%;
+  left: 50%;
+  margin-left: 240px;
   background-size: cover;
   max-width:300px;
   min-width:250px;
@@ -1272,36 +1259,32 @@ ul#sidebar-list-2 li {
   max-width: 1035px;
 }
 
-#copyright{
-  /*width:60%;
-  margin: 0 auto;*/
+#copyright{  
+  margin: 0 auto;
   color: #666;
   padding: 10px;
   text-align: center;
   background-color: transparent;
-  /*background-image:  url("../images/legal-lines-box.png");
-  background-size: 100% auto;  
-  background-repeat: no-repeat; */
-  /*margin-top:20%;*/
-
-  border: 20px solid transparent;
-  padding: 0;
-  -webkit-border-image: url(border.png) 30 round;
-  -o-border-image: url(border.png) 30 round;
-  border-image: url("../images/legal-lines-box.png") 30 round;
-  /* border-image-width: 20px; */
-  display: table;
+  background:  url("../images/legal-lines-box.png") left top no-repeat;
+  background-size: 100% 100%;      
+  width: 478px;
+  height: 108px;
   z-index:10;
 }
 
-#copyright-msg{
-  display: table-cell;
-  /*height: 60px;*/
-  background-color:#FDF2ED; 
+@media (max-width: 660px){
+  #copyright{       
+    width: 378px;
+    height: 108px;    
+  }
+}
+
+#copyright-msg{  
+  margin-top: 10px;
   font-family: 'Droid Serif', Arial, Helvetica, sans-serif;
   color:rgb(178, 70, 154);  
-  font-size: 11px;
-  line-height:2em;
+  font-size: 14px;
+  line-height:1.5em;  
 }
 
 #copyright a{
@@ -1459,6 +1442,7 @@ a.home{
   }
 
   #categoryPicture,
+  #doll,
   .view-content .thumbPageContainer .thumbHeader img,
   .view-content .thumbPageContainer .thumbFooter img {
     display: none;
@@ -1546,10 +1530,7 @@ a.home{
   width: 200px;
   height: 320px;
   float: left;
-  background: #D26;
-  /*border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;*/
+  background: #D26;  
   margin-bottom: 10px;
   border: none;
   overflow: hidden;
@@ -1607,26 +1588,29 @@ a.home{
 }
 
 #doll-name {
-  width:40%;
-  height:10%;
-  background:url('../images/name-tag.png') no-repeat;
-  background-size: contain;
-  position: relative;
-  margin-top: -91px;
+  width:80%;  
+  background:url('../images/name-tag.png') left top no-repeat;
+  background-size: 100% 100%;
+  /*position: absolute;
+  top: -50%;
+  left: 0;*/
+  margin-top: -105px;
 }
 
 #doll-portrait{
-  position: relative;
-  margin-top: -91px;
-  width:45%;
-
+  /*position: absolute;
+  top: -50px;
+  right: 0;
+  width:45%;*/
+  margin-top: -100px;
 }
 
+
 #containerProductPage #doll-name h2{
-  font-size: 30px;
-  line-height: 1em;
+  font-size: 2em;
+  line-height: 2.5em;
   width:100%;
-  padding:35px 0;
+  padding:10% 0 5%;
   text-align: center;
 }
 
@@ -1644,6 +1628,10 @@ a.home{
 #crossSellingContainer{
   color:#b2469a;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+#containerHomepage #crossSellingContainer{
+  padding: 0;
 }
 
 #crossSellingContainer .crossSellTitle{
@@ -1668,4 +1656,14 @@ a.home{
 
 #productDetail .theme-default .nivoSlider{
   box-shadow: none;
+}
+
+@media screen and (max-width: 660px){
+  #container {
+    padding-top: 0 !important;
+  }
+
+  #topNavContainer {
+    height: 100px !important;
+  }
 }

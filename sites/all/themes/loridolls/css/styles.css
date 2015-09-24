@@ -466,7 +466,7 @@ html {
 
 
 #topNavContainer {
-	background: url(../images/topNav-kraft-shorter.png) center no-repeat;
+	/*background: url(../images/topNav-kraft-shorter.png) center no-repeat;*/
 
 	width:80%;
 	max-width:1600px;
@@ -483,23 +483,6 @@ html {
     margin-left: -800px; /* Go half of width to the left, centering the element */
 }
 	
-
-
-
-/*#topNavContainer {
-	background: url(../images/topNav-kraft-shorter.png) center no-repeat;
-
-	width:80%;
-	max-width:1600px;
-	height:150px;
-	margin:0px auto;
-	position:fixed;
-	top:0;
-	right:0;
-	left:0;
-	z-index:10000;
-	
-}*/
 
 
 #topNav {
@@ -611,7 +594,7 @@ html {
 	padding:5% 0 0 0;
 	overflow:visible;
 	/*background:purple;*/
-	background:cornsilk url(../images/iStock_000006543896Medium-pencil-drawing-DUOTONE-900px.jpg) no-repeat right top;
+	/*background:cornsilk url(../images/iStock_000006543896Medium-pencil-drawing-DUOTONE-900px.jpg) no-repeat right top;*/
 	text-align:center;
 	
 	

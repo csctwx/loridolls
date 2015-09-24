@@ -953,7 +953,7 @@ CSS Document */
 		@media all and (max-width: 1200px) {
 			
 			#topNavContainer {
-				background: url(../images/topNav-kraft-shorter.png) center no-repeat;
+				/*background: url(../images/topNav-kraft-shorter.png) center no-repeat;*/
 
 				width:100% !important;
 				/*max-width:1600px;*/
@@ -1166,7 +1166,7 @@ CSS Document */
 
 
 	#topNavContainer {
-		background: url("../images/pink-header.png") center no-repeat;
+		/*background: url("../images/pink-header.png") center no-repeat;*/
 		
 
 		width:100%;

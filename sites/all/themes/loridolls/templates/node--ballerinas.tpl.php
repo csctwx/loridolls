@@ -50,24 +50,30 @@
     $doll_portrait_url = file_create_url($doll->field_doll_portrait['und'][0]['uri']);
   ?> 
     <div class="col-xs-12">
-      <div class="pull-right" id="doll-portrait">
-        <img class="img-responsive" src="<?php echo $doll_portrait_url;  ?>" alt="Doll Portrait" />
+      <div class="row">
+        <div class="col-xs-6">
+          <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
+          <div id="doll-qa">
+            <?php $doll_qas = $doll->field_doll_qa['und']; ?>
+            <ul>
+              <?php foreach ($doll_qas as $item): ?>
+                <?php 
+                  $qa = field_collection_field_get_entity($item); 
+                  $qa_question = $qa->field_doll_qa_question['und'][0]['value'];
+                  $qa_answer = $qa->field_doll_qa_answer['und'][0]['value'];
+                ?> 
+                <li><h3><?php echo $qa_question; ?></h3><?php echo $qa_answer; ?></li>
+              <?php endforeach; ?> 
+            </ul>
+          </div>
+        </div>   
+        <div class="col-xs-6">
+          <div id="doll-portrait">
+            <img class="img-responsive" src="<?php echo $doll_portrait_url;  ?>" alt="Doll Portrait" />
+          </div>
+        </div> 
       </div>
-      <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
-      <div id="doll-qa">
-        <?php $doll_qas = $doll->field_doll_qa['und']; ?>
-        <ul>
-          <?php foreach ($doll_qas as $item): ?>
-            <?php 
-              $qa = field_collection_field_get_entity($item); 
-              $qa_question = $qa->field_doll_qa_question['und'][0]['value'];
-              $qa_answer = $qa->field_doll_qa_answer['und'][0]['value'];
-            ?> 
-            <li><h3><?php echo $qa_question; ?></h3><?php echo $qa_answer; ?></li>
-          <?php endforeach; ?> 
-        </ul>
-      </div>
-    </div>    
+    </div> 
   </div> 
 </div>
 <div id="crossSellingContainer">

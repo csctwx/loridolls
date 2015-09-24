@@ -11,8 +11,7 @@
   <?php endif; ?>
   <?php if (is_object($views_page)): ?>
     <div id="categoryPicture">
-      <!-- <img class="img-responsive img-center" src="<?php //echo myfunctionlib_get_cat_picture($title); ?>" alt="cat_picture" /> -->
-      <img class="img-responsive img-center" src="<?php print base_path() . drupal_get_path('theme', 'loridolls') . '/images/doll-section-vignette.jpg'; ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/up.jpg'); ?>" alt="cat_picture" />
+      <img class="img-responsive img-center" src="<?php echo myfunctionlib_top_picture_url($title); ?>" alt="cat_picture" />
     </div>
   <?php endif; ?>
   
