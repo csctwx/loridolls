@@ -105,8 +105,9 @@
                   </ul>
                 </div>
               </li>              
-              <li><a href="#">Videos</a></li>
-              <li><a href="#">Games &amp; Downloads</a></li>
+              <li><?php print l(t('Videos'), '/video-gallery', array('attributes' => array('class' => 'videos'))); ?>
+              </li>
+              <li><?php print l(t('Games &amp; Downloads'), '/games', array('attributes' => array('class' => 'games'))); ?></li>
             </ul>
           </div>
         </nav>
@@ -141,9 +142,9 @@
                            <li class='has-sub'><?php print l(t('Weekend Gateway'), '/weekend-gateway', array('attributes' => array('class' => 'weekend-gateway'))); ?></li>
                         </ul>
                       </li>
-                      <li><?php print l(t('Videos'), '/categories', array('attributes' => array('class' => 'figurines'))); ?>
+                      <li><?php print l(t('Videos'), '/video-gallery', array('attributes' => array('class' => 'videos'))); ?>
                       </li>
-                      <li><?php print l(t('Games & Downloads'), '/games', array('attributes' => array('class' => 'accessories'))); ?></li>
+                      <li><?php print l(t('Games & Downloads'), '/games', array('attributes' => array('class' => 'games'))); ?></li>
                     </ul>
                   </div>
               </div>

@@ -94,4 +94,15 @@ function loridolls_breadcrumb($variables) {
   }
 }
 
+function loridolls_preprocess_views_view(&$vars) {
+  $view = &$vars['view'];
+  // Make sure it's the correct view
+  if ($view->name == 'videos') {
+    // add needed javascript
+    drupal_add_js(drupal_get_path('theme', 'loridolls') . '/js/html5gallery.js');
+    // add needed stylesheet
+    drupal_add_css(drupal_get_path('theme', 'loridolls') .'/css/video.css');
+  }
+}
+
 ?>

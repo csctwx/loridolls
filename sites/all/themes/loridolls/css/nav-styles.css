@@ -72,15 +72,8 @@
 #cssmenu > ul > li.has-sub > a {
   padding-right: 32px;
 }
-#cssmenu > ul > li:hover > a {
-  /*color: #ffffff;*/
-  
-  /*color:orange;*/
-  color:rgb(80,61,51);
-  /*border-top:2px solid rgb(80,61,51);
-  padding-top:2px;*/
-
-
+#cssmenu > ul > li:hover > a {  
+  color:#782767;  
 }
 #cssmenu li.has-sub::after {
   display: block;
