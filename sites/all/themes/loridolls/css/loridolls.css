@@ -955,7 +955,7 @@ body.page-node-11 .thumbPageContainer{
   padding: 5px;
   text-align: center;
   display: block;
-  background-color:#e6ce9a; 
+  background-color:#fff; 
   height: 530px;
 }
 
@@ -1050,15 +1050,19 @@ ul#sidebar-list li:last-of-type {
 }
 
 .loc-name {
-  color: #ae2118;
+  color: #f56e88;
   font-weight: bold;
 }
 
 #container table.thumbPageContainer,
 #container div#map-container{  
   /*font: normal 14px/20px Arial, Helvetica, sans-serif;*/
-  color: #333333;
-  font: normal 14px/24px 'ClearSans-Regular', Arial, Helvetica, sans-serif;
+  /*color: #333333;
+  font: normal 14px/24px 'ClearSans-Regular', Arial, Helvetica, sans-serif;*/
+  padding:0;
+  margin: 0 !important;
+  width: 100%;
+
 }
 
 table.thumbPageContainer td {
@@ -1075,13 +1079,13 @@ table.thumbPageContainer > tbody > tr:first-of-type > td {
 
 table.thumbPageContainer td b{
   text-transform: uppercase;
-  color: maroon;
+  color:#b2469a;
   font-weight: bold;
 }
 
 table.thumbPageContainer td input,
 table.thumbPageContainer td select {
-    border: 1px solid #9b654a;
+    border: 1px solid #b2469a;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -1105,8 +1109,8 @@ table.thumbPageContainer td select {
 }
 
 table.thumbPageContainer td input[type=button] {
-  color: #ffa62e; 
-  background-color: #503d33;
+  color: #fff; 
+  background-color: #b2469a;
   text-transform: uppercase;
   padding: 1px 5px;
   border: 1px solid #9b654a;

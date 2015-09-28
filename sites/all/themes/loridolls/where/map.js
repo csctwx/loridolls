@@ -364,7 +364,7 @@ function addMarker(location, isDestination, num) {
   var icon;
   if (isDestination) {
   	if(num){
-  		icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + num + '|69261B|FFFFFF';
+  		icon = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=' + num + '|b2469a|FFFFFF';
   	}
   	else {
   		icon = destinationIcon;
