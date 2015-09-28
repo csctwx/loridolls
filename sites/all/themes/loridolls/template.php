@@ -34,9 +34,9 @@ function loridolls_preprocess_page(&$vars, $hook) {
   }
 
 
-
-  // kpr($dolls_types); die();
+  $accessories_types[] = 'weekend_gateway';
   $views_page = views_get_page_view();
+  //kpr($views_page); die();
   if (is_object($views_page)) {    
     $view_name = $views_page->name; 
     if(in_array($view_name, $dolls_types)){
@@ -47,7 +47,9 @@ function loridolls_preprocess_page(&$vars, $hook) {
     }       
   }
 
-  $node_type = $vars['node']->type;  
+  $node_type = $vars['node']->type; 
+  $node_type = ($node_type == 'weekend_gateway') ? 'weekend_getaway' : $node_type;
+  // kpr($node_type); die();
   if($node_type){ 
     if(in_array($node_type, $accessories_types)) {
       myfunctionlib_set_breadcrumbs($node_type, 'accessories');

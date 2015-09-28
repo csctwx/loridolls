@@ -4,14 +4,12 @@
   <div id="breadcrumb">
     <?php print $breadcrumb; ?>    
   </div>
-  
   <?php if (is_object($views_page)): ?>
 	  <div id="productTitleDetailPage">		
 		<h2><?php echo $title; ?></h2>
 	  </div>
   <?php endif; ?>
   <?php print render($page['content']); ?>
-  
 </div>
 <!-- InstanceEndEditable -->
 <?php if ($page['sidebar_first']): ?>

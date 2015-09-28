@@ -1708,3 +1708,33 @@ div.html5gallery-title-text-0 {
 .html5gallery-car-0 {
   margin-top: -120px;
 }
+
+.content.page .thumbHeader,
+.content.page .thumbMiddle,
+.content.page .thumbFooter {
+  width: 100%;
+  max-width: none;  
+}
+
+.content.page .thumbMiddle {
+  background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
+  background-size: contain;
+  padding: 0 5% 2% 5%;
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}
+
+.content.page .thumbHeader img,
+.content.page .thumbFooter img {
+  width: 100%;
+}
+
+.content.page .thumbMiddle a {
+  color: #b2469a;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+
+.content.page .row {
+  margin-bottom: 10px;
+}

@@ -101,7 +101,7 @@
                     <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'fashion-outfits'))); ?></li>
                     <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fashion-accessories', array('attributes' => array('class' => 'fashion-accessories'))); ?></li>
                            <li class='has-sub'><?php print l(t('Urban Living'), '/urban-living', array('attributes' => array('class' => 'urban-living'))); ?></li>
-                           <li class='has-sub'><?php print l(t('Weekend Gateway'), '/weekend-gateway', array('attributes' => array('class' => 'weekend-gateway'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Weekend Getaway'), '/weekend-getaway', array('attributes' => array('class' => 'weekend-getaway'))); ?></li>
                   </ul>
                 </div>
               </li>              
@@ -122,11 +122,12 @@
                 <div id='cssmenu'>  
                  <?php print l(t(' '), '/', array('attributes' => array('class' => 'home'))); ?>
                  <a href="#" id="trigger" class="menu-trigger">&nbsp;</a>              
-                  <?php 
-                    // $main_menu_tree = menu_tree(variable_get('menu_main_links_source', 'main-menu'));
-                    // print drupal_render($main_menu_tree);
+                  <?php                     
+                    $main_menu_tree = menu_tree_all_data('main-menu');
+                    $main_menu_output = menu_tree_output($main_menu_tree);
+                    print drupal_render($main_menu_output);                    
                   ?>
-                    <ul>          
+                    <!-- <ul>          
                       <li class='active has-sub'><?php print l(t('Dolls'), '/Dolls', array('attributes' => array('class' => 'dolls'))); ?>
                         <ul>
                            <li><?php print l(t('Fashion Dolls'), '/fashion-dolls', array('attributes' => array('class' => 'fashion-dolls'))); ?></li>
@@ -139,13 +140,13 @@
                            <li><?php print l(t('Fashion Outfits'), '/fashion-outfits', array('attributes' => array('class' => 'fashion-outfits'))); ?></li>
                            <li class='has-sub'><?php print l(t('Fashion Accessories'), '/fashion-accessories', array('attributes' => array('class' => 'fashion-accessories'))); ?></li>
                            <li class='has-sub'><?php print l(t('Urban Living'), '/urban-living', array('attributes' => array('class' => 'urban-living'))); ?></li>
-                           <li class='has-sub'><?php print l(t('Weekend Gateway'), '/weekend-gateway', array('attributes' => array('class' => 'weekend-gateway'))); ?></li>
+                           <li class='has-sub'><?php print l(t('Weekend Getaway'), '/weekend-getaway', array('attributes' => array('class' => 'weekend-getaway'))); ?></li>
                         </ul>
                       </li>
                       <li><?php print l(t('Videos'), '/video-gallery', array('attributes' => array('class' => 'videos'))); ?>
                       </li>
                       <li><?php print l(t('Games & Downloads'), '/games', array('attributes' => array('class' => 'games'))); ?></li>
-                    </ul>
+                    </ul> -->
                   </div>
               </div>
             </div>
@@ -158,16 +159,17 @@
                      <div id="copyright">
                         <div id="copyright-msg">
                           ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
-                        <br /><a href="#" target="_blank">CONTACT US</a>-<a href="#" target="_blank">WHERE TO BUY</a>-<a href="#" target="_blank">FAQs</a>
-                        <br /><a href="#" target="_blank">TERMS OF USE</a>-<a href="#" target="_blank">PRIVACY POLICY</a>
+                        <br />
+                        <?php print l(t('CONTACT US'), '/contact-us', array('attributes' => array('class' => 'contact-us'))); ?>
+                        -<?php print l(t('WHERE TO BUY'), '/where-to-buy', array('attributes' => array('class' => 'where-to-buy'))); ?>
+                        -<?php print l(t('FAQ'), '/faq', array('attributes' => array('class' => 'faq'))); ?>
+                        <br /><?php print l(t('TERMS'), '/terms-and-conditions', array('attributes' => array('class' => 'terms-and-conditions'))); ?>
+                        -<?php print l(t('PRIVACY POLICY'), '/privacy-policy', array('attributes' => array('class' => 'privacy-policy'))); ?>
                         </div>          
                     </div>        
                 <!-- </div>     -->
               </div>    
             </div> 
-
-            
-           
           </div><!-- /scroller-inner -->
         </div><!-- /scroller -->
 

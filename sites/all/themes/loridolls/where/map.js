@@ -66,7 +66,7 @@ var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1];
     console.log(base_url);
 	$.ajax({
 		type: "GET",
-		url: base_url +"/sites/all/themes/terra/where/retailers.csv",
+		url: base_url +"/sites/all/themes/loridolls/where/retailers.csv",
 		dataType: "text",
 		success: function(data) {processData(data);}	 
 	});  	
