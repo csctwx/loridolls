@@ -35,9 +35,11 @@
 
       <table class="thumbPageContainer" >
         <tr>
-          <td colspan="2">Specialty stores throughout the United States and Canada carry <strong>TERRA by Battat™</strong> from time to time. While
-    we can't guarantee these stores will have what you are looking for when you are looking, the following is a
-    list of stores that sometimes carry our toys.
+          <td colspan="2">Like fashion and, well, everything, Lori™ dolls, clothes and accessories are always changing. This site is our OG Lookbook. It includes many things
+OG. Some are available in stores right now. Others are from our past or our future.
+<br /><br />
+This page will help you nd stores near you that sell Lori™ things. They might not necessarily carry the exact thing you are looking for. (We suggest
+you call ahead to check.) Either way, they do carry lots of Lori™ stu we think you'll love.
           </td>
         </tr>
         <tr>
