@@ -44,6 +44,20 @@ function myfunctionlib_get_fields($content){
                 elseif (($value['#field_type'] == 'field_collection')) {
                     $field_value = $value['#items'];
                    // $fields[$field_name] = $value['#items'];
+                    // $field_value = field_collection_field_get_entity($field_value);
+                    if($value['#field_name'] == "field_coloring_sheets"){
+                        foreach ($field_value as $key => $value_arr) {
+                            $value_obj = field_collection_field_get_entity($value_arr);
+                            $value_arr = array();
+                            $value_arr['picture_size'] = $value_obj
+                                                ->field_product_picture_size['und'][0]['value'];
+                            $value_arr['picture_url'] = file_create_url($value_obj
+                                                ->field_product_picture['und'][0]['uri']);
+                            $value_arr['pdf_url'] = file_create_url($value_obj
+                                                ->field_product_pdf['und'][0]['uri']);
+                            $field_value[$key] = $value_arr;
+                        }
+                    }                    
                 }
     		}
     		elseif ($field == 'body') {

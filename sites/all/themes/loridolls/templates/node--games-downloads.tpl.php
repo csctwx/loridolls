@@ -82,17 +82,40 @@
 <div id="productTitleDetailPage">   
     <h2><?php echo $title; ?></h2>
 </div>
-<div class="content page"<?php print $content_attributes; ?>>
+<div class="content page games-downloads"<?php print $content_attributes; ?>>
   <div class="thumbHeader">
       <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-top.png'); ?>" />
   </div>
   <div class="thumbMiddle"> 
-    <?php
-      // Hide comments and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      print render($content);
-    ?>
+    <div class='inner'>
+      <?php
+        // Hide comments and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        if(!empty($fields['coloring_sheets']['value'])){
+          //echo '<h2>Coloring Sheets</h2>';
+          echo '<h2>Coloring Sheets</h2><div class="grid js-masonry" data-masonry-options="{ &quot;columnWidth&quot;: 200, &quot;gutter&quot;: 10  }">';
+          $coloring_sheets = $fields['coloring_sheets']['value'];
+          foreach ($coloring_sheets as $coloring_sheet) {
+            $size = $coloring_sheet['picture_size'];
+            $image = "<img src='".$coloring_sheet['picture_url']."' alt='Coloring Sheet' />";           
+            $pdf = "<a href='".$coloring_sheet['pdf_url']."' target='_blank'><span class='glyphicon glyphicon-download-alt'>&#160;Download PDF File</span></a>";
+            if($size == 3){
+              print "<div class='grid-item  grid-item--width2 grid-item--height2'>".$image.$pdf."</div>";
+            }
+            elseif($size == 2){
+              print "<div class='grid-item  grid-item--width2'>".$image.$pdf."</div>";
+            }
+            else{
+              print "<div class='grid-item'>".$image.$pdf."</div>";
+            }
+          }
+          echo '</div>';
+        }
+        //print render($content);
+      ?>
+    </div>
+    
   </div>
   <div class="thumbFooter">
       <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-bottom.png'); ?>" />

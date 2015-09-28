@@ -21,7 +21,7 @@ var numusstores;
 var numcastores;	
 
 //var destinationIcon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=D|FF0000|000000';
-var destinationIcon= 'sites/all/themes/terra/where/store-marker-T.png';
+var destinationIcon= 'sites/all/themes/loridolls/where/store-marker-T.png';
 // 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=7|69261B|FFFFFF';
 var originIcon = 'https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=O|FFFF00|000000';
 var origin1 = new google.maps.LatLng(55.930, -3.118);
@@ -61,7 +61,10 @@ $(document).ready(function() {
 $('#map-container').hide();
 
 var l = window.location;
+// alert("host:"+l.host);
+// alert(" pathname:"+l.pathname);
 var base_url = l.protocol + "//" + l.host + "/" + l.pathname.split('/')[1];
+// var base_url = l.protocol + "//" + l.host;
 
     console.log(base_url);
 	$.ajax({
