@@ -107,7 +107,7 @@
               </li>              
               <li><?php print l(t('Videos'), '/video-gallery', array('attributes' => array('class' => 'videos'))); ?>
               </li>
-              <li><?php print l(t('Games &amp; Downloads'), '/games-downloads', array('attributes' => array('class' => 'games-downloads'))); ?></li>
+              <li><?php print l(t('Games & Downloads'), '/games-and-downloads', array('attributes' => array('class' => 'games-downloads'))); ?></li>
             </ul>
           </div>
         </nav>
