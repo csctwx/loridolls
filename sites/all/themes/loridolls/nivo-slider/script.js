@@ -29,8 +29,8 @@ $(window).load(function() {
           animSpeed: 1000,                 // Slide transition speed
           pauseTime: 6000,                // How long each slide will show
           startSlide: 0,                  // Set starting Slide (0 index)
-          directionNav: true,             // Next & Prev navigation
-          controlNav: false,               // 1,2,3... navigation
+          directionNav: false,             // Next & Prev navigation
+          controlNav: true,               // 1,2,3... navigation
           controlNavThumbs: false,        // Use thumbnails for Control Nav
           pauseOnHover: false,             // Stop animation while hovering
           manualAdvance: false,           // Force manual transitions

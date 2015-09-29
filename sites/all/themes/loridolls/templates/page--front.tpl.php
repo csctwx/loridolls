@@ -9,23 +9,28 @@
     </div>
     <div class="slider-wrapper theme-default slideshowNarrow">
         <div id="sliderTwo" class="nivoSlider">
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide2.jpg'); ?>" alt="" /></a>
-            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/slide1.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/slide3.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/homepage-slide1-mobile.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/homepage-slide1-mobile.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/homepage-slide2-mobile.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/homepage-slide2-mobile.jpg'); ?>" alt="" /></a>
+            <a href="#"><img src="<?php echo myfunctionlib_theme_path('images/homepage-slide3-mobile.jpg'); ?>"  data-thumb="<?php echo myfunctionlib_theme_path('images/homepage-slide3-mobile.jpg'); ?>" alt="" /></a>
         </div>
     </div>
 </div>
 
 <div id="containerHomepage" class="text-center">
+  <div class="mobile" id="home-statement">
+    <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/homepage-statement-mobile-rev.png'); ?>" />
+  </div>
   <div id="welcome">
-    <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-top-rev.png'); ?>" />
+    <img class="img-responsive desktop" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-top-rev.png'); ?>" />
+    <img class="img-responsive mobile" src="<?php echo myfunctionlib_theme_path('images/lori-homepage-box-mobile-top.png'); ?>" />
   </div>
   <div class="grid">
     <div id="fun-game">
       <h2>FUN & GAMES</h2>
       <h4>Wallpapers, coloring sheets, ...and fun galory!</h4>
       <div class="row">
-          <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/homepage-fun_games-rev.png'); ?>" />
+          <img class="img-responsive desktop" src="<?php echo myfunctionlib_theme_path('images/homepage-fun_games-rev.png'); ?>" />
+          <img class="img-responsive mobile" src="<?php echo myfunctionlib_theme_path('images/homepage-fun_games-mobile-rev.png'); ?>" />
       </div>
       <div class="row">
           <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" />

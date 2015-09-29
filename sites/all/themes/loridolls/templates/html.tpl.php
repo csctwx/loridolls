@@ -107,7 +107,7 @@
               </li>              
               <li><?php print l(t('Videos'), '/video-gallery', array('attributes' => array('class' => 'videos'))); ?>
               </li>
-              <li><?php print l(t('Games &amp; Downloads'), '/games', array('attributes' => array('class' => 'games'))); ?></li>
+              <li><?php print l(t('Games &amp; Downloads'), '/games-downloads', array('attributes' => array('class' => 'games-downloads'))); ?></li>
             </ul>
           </div>
         </nav>
@@ -152,7 +152,19 @@
             </div>
             <?php print $page; ?>
             <?php print $page_bottom; ?> 
-            <div id="doll"></div>
+            <div id="doll">
+              <?php
+                $foot_img_arr =  array('footer-redhead-doll.png',
+                                      'footer-ballerina-doll.png',
+                                      'footer-blonde-doll.png',
+                                      'footer-purple-doll.png',
+                                      'footer-turquoise-doll.png'
+                                      );
+                $foot_img = $foot_img_arr[rand(0,4)];
+
+              ?> 
+              <img src="<?php echo myfunctionlib_theme_path('images/'.$foot_img); ?>" alt="Foot Image" />
+            </div>
             <div id="bottomFooterContainer" class="container">    
               <div id="footer-bg">
                  <!-- <div class="row">     -->   
