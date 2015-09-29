@@ -74,10 +74,15 @@
  * @see template_process()
  */
 ?>
+<?php   
+  //Create field variables 
+  $fields = myfunctionlib_get_fields($content);  
+  // kpr($fields); die();  
+?>
 <div id="productTitleDetailPage">   
     <h2><?php echo $title; ?></h2>
 </div>
-<div class="content page"<?php print $content_attributes; ?>>
+<div class="content page faq"<?php print $content_attributes; ?>>
   <div class="thumbHeader">
       <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-top.png'); ?>" />
   </div>
@@ -86,8 +91,35 @@
       // Hide comments and links now so that we can render them later.
       hide($content['comments']);
       hide($content['links']);
-      print render($content);
+      //print render($content);
     ?>
+    <div class="contents row">
+      <?php foreach ($fields['faq']['value'] as $key => $value): ?>
+        <h2><?php echo $value['faq_title'];  ?></h2>
+        <?php foreach ($value['faq_arr'] as $key2 => $qa): ?>
+          <?php $index = '#'.$key.'-'.$key2; ?>
+          <a href="<?php echo $index; ?>"><?php echo $qa['question']; ?></a><br />
+        <?php endforeach; ?> 
+        <br />
+      <?php endforeach; ?>
+    </div>
+    <div class="row">
+          <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" />
+    </div>
+    <div class="detail row">
+      <?php foreach ($fields['faq']['value'] as $key => $value): ?>
+        <h1><?php echo $value['faq_title'];  ?></h1>
+        <?php foreach ($value['faq_arr'] as $key2 => $qa): ?>
+          <?php $id = $key.'-'.$key2; ?>
+          <div class="qa">
+            <a name="<?php echo $id; ?>">&#160;</a>
+            <h2><?php echo $qa['question']; ?></h2>
+            <?php echo $qa['answer']; ?><br />
+          </div>          
+        <?php endforeach; ?> 
+        <br />
+      <?php endforeach; ?>
+    </div>
   </div>
   <div class="thumbFooter">
       <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-bottom.png'); ?>" />

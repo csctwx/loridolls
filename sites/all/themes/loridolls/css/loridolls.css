@@ -1790,3 +1790,42 @@ div.html5gallery-title-text-0 {
   font-size: 16px;
   line-height:35px;
 }
+
+.content.faq .row{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content.faq .row img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content.faq h2:target {
+  padding-left: 0;
+  background: transparent;
+  color: #b2469a;
+
+}
+
+.content.faq h2{
+  margin-top: 0;
+  border: none;
+  padding: 20px 0 0 0;
+}
+
+.content.faq .detail .qa{
+  position: relative;
+}
+
+.content.faq .detail .qa a{
+  display: block;
+  position: absolute;
+  top: -150px;
+  text-decoration: none;
+}
+
+.content.faq .detail h1 {
+  margin-top: 10px;
+}
+

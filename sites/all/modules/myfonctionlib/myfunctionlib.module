@@ -42,9 +42,7 @@ function myfunctionlib_get_fields($content){
     				
     			}
                 elseif (($value['#field_type'] == 'field_collection')) {
-                    $field_value = $value['#items'];
-                   // $fields[$field_name] = $value['#items'];
-                    // $field_value = field_collection_field_get_entity($field_value);
+                    $field_value = $value['#items'];                   
                     if($value['#field_name'] == "field_coloring_sheets"){
                         foreach ($field_value as $key => $value_arr) {
                             $value_obj = field_collection_field_get_entity($value_arr);
@@ -57,7 +55,23 @@ function myfunctionlib_get_fields($content){
                                                 ->field_product_pdf['und'][0]['uri']);
                             $field_value[$key] = $value_arr;
                         }
-                    }                    
+                    }
+                    elseif($value['#field_name'] == "field_faq"){
+                        foreach ($field_value as $key => $value_arr) {
+                            $value_obj = field_collection_field_get_entity($value_arr);                            
+                            $value_arr = array();
+                            $value_arr['faq_title'] = $value_obj->field_title['und'][0]['value'];
+                            $field_doll_qas = $value_obj->field_doll_qa['und'];
+                            foreach($field_doll_qas as $field_doll_qa){
+                                $field_doll_qa_obj = field_collection_field_get_entity($field_doll_qa);
+                                $value_arr['faq_arr'][] = array(
+                                    'question'=>$field_doll_qa_obj->field_doll_qa_question['und'][0][value],
+                                    'answer'=>$field_doll_qa_obj->field_doll_qa_answer['und'][0][value]);
+                            }
+                            // kpr($value_arr); die();
+                            $field_value[$key] = $value_arr;
+                        }
+                    }                           
                 }
     		}
     		elseif ($field == 'body') {
