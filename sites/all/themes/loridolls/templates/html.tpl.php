@@ -70,6 +70,9 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]--> 
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="<?php echo myfunctionlib_theme_path('css/ie-only.css'); ?>" />
+  <![endif]-->
 </head>
 <body class="<?php print $classes; ?>" <?php print $attributes; ?>>
   <?php print $page_top; ?>
