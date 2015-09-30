@@ -1646,15 +1646,15 @@ a.home{
 
 #doll-name {
   width:80%;
-  /*max-height:30%;   */
+  /*max-height:80px;   */
   background:url('../images/name-tag.png') left top no-repeat;
   background-size: 100% 100%;
   position: absolute;
-  top: -60%;
+  top: -53px;
   left: 5px;
-  /*margin-top: -39%;*/
+  margin-top: -40px;
   text-align: center;
-  padding:5% 30% 0 25%;
+  padding:5% 20% 0 17%;
   /*height: 50px;*/
 }
 
