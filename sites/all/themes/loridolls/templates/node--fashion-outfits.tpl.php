@@ -37,7 +37,7 @@
         <h3>Where to Buy</h3>
         <?php foreach ($fields['store_link']['value'] as $item): ?>
             <?php $store_link = field_collection_field_get_entity($item); ?> 
-            <a href="<?php echo $store_link->field_store_link_url['und']['0']['value'] ?>">
+            <a href="<?php echo $store_link->field_store_link_url['und']['0']['value'] ?>" target="_blank">
             <?php //echo $store_link->field_store_link_name['und']['0']['value'] ?>
             <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/target.png'); ?>" />
             </a>

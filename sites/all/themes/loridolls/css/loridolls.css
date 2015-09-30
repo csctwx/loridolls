@@ -39,7 +39,7 @@ text-align:left !important;
 }
 
 #cssmenu > ul {  
-  padding-left: 160px;
+  padding-left: 150px;
   padding-top: 15px;
 }
 
@@ -1298,7 +1298,7 @@ ul#sidebar-list-2 li {
 }
 
 #copyright-msg{  
-  margin-top: 10px;
+  margin-top: 8px;
   font-family: 'Droid Serif', Arial, Helvetica, sans-serif;
   color:rgb(178, 70, 154);  
   font-size: 12px;
@@ -1307,6 +1307,7 @@ ul#sidebar-list-2 li {
 
 #copyright-msg a {
   font-size: 12px;
+  line-height:1.5em;  
 }
 
 #copyright a{
@@ -1405,6 +1406,7 @@ ul#sidebar-list-2 li {
 
 .menu-trigger:before {  
   background: #fff;
+  height: 4px;
   box-shadow: 0 6px transparent, 0 12px #fff, 0 18px transparent, 0 24px #fff;  
 }
 
@@ -1431,8 +1433,8 @@ a.home{
   .menu-trigger {
     display: block;
     position: absolute;
-    left: 30px;
-    top: 30px;
+    left: 33px;
+    top: 33px;
   }
 
   a.home{
@@ -1445,11 +1447,20 @@ a.home{
     background-image: url("../images/lori_header_mini-mobile.png");
   }
 
-  .view-content .thumbPageContainer,
-  .view-content .thumbPageContainer .thumbMiddle {
+  .view-content .thumbPageContainer {
     background: none;
     padding: 0;
   }
+
+  .view-content .thumbPageContainer .thumbMiddle {
+    padding: 2% 0;
+  }
+
+  .view-content .thumbPageContainer .thumbMiddle .grid img{
+    max-width: 100%;
+    min-height: auto;
+  }
+
 
   .view-content .thumbPageContainer .grid .views-field-field-category-picture {
     display: none;
@@ -1464,9 +1475,9 @@ a.home{
   }
 
   #categoryPicture,
-  #doll,
+  #doll/*,
   .view-content .thumbPageContainer .thumbHeader img,
-  .view-content .thumbPageContainer .thumbFooter img {
+  .view-content .thumbPageContainer .thumbFooter img*/ {
     display: none;
   }
 
@@ -1490,7 +1501,7 @@ a.home{
 
 @media screen and (max-width: 773px){
   .view-content .thumbPageContainer .grid {
-    max-width: 410px;
+    /*max-width: 410px;*/
   }
 }
 
@@ -1560,12 +1571,32 @@ a.home{
   border-radius: 0;
 }
 
-.grid-item--width2 { width:  410px; }
+.grid-item--width2 { width:  410px;}
 .grid-item--width3 { width:  600px; }
 
 .grid-item--height2 { height: 650px; }
 .grid-item--height3 { height: 900px; }
 .grid-item--height4 { height: 1200px; }
+
+@media screen and (min-width: 521px) and (max-width: 773px){
+  .grid-item, 
+  .grid-item--width2 {     
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 520px){
+  .grid-item, 
+  .grid-item--width2 { 
+    max-width: 90%;
+    margin-left:5%;
+  }
+  
+  .grid-item, 
+  .grid-item--height2 {
+    height: auto; 
+  }
+}
 
 .grid-item--gigante {
   width: 240px;
@@ -1836,4 +1867,8 @@ div.html5gallery-title-text-0 {
 
 .mobile{
   display: none;
+}
+
+.heart {
+  color: #eac473;
 }

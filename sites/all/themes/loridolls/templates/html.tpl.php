@@ -173,13 +173,14 @@
                  <!-- <div class="row">     -->   
                      <div id="copyright">
                         <div id="copyright-msg">
-                          ©<?php echo date('Y'); ?> LORI&trade; by OG. ALL RIGHT RESERVED.
+                          ©<?php echo date('Y'); ?> LORI&trade;. ALL RIGHT RESERVED.
                         <br />
                         <?php print l(t('CONTACT US'), '/contact-us', array('attributes' => array('class' => 'contact-us'))); ?>
                         -<?php print l(t('WHERE TO BUY'), '/where-to-buy', array('attributes' => array('class' => 'where-to-buy'))); ?>
                         -<?php print l(t('FAQ'), '/faq', array('attributes' => array('class' => 'faq'))); ?>
                         <br /><?php print l(t('TERMS'), '/terms-and-conditions', array('attributes' => array('class' => 'terms-and-conditions'))); ?>
                         -<?php print l(t('PRIVACY POLICY'), '/privacy-policy', array('attributes' => array('class' => 'privacy-policy'))); ?>
+                        <br /><a href="http://www.battatco.com" target="_blank" >MAISON JOSEPH BATTAT LTD</a>
                         </div>          
                     </div>        
                 <!-- </div>     -->
