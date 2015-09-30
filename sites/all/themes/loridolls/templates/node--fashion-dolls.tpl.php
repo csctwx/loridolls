@@ -54,7 +54,7 @@
     <div class="col-xs-12">
       <div class="row">
         <div class="col-xs-6">
-          <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
+          <div id="doll-name"><span><?php echo $doll_name;  ?></span></div>
           <div id="doll-qa">
             <?php $doll_qas = $doll->field_doll_qa['und']; ?>
             <ul>
@@ -107,3 +107,12 @@
     </div>
   <?php endif; ?>
 </div>
+<script type="text/javascript">
+  // $(function(){
+  //     // alert('here');
+      
+  // });
+  $("#doll-name").bigtext({
+                              //minfontsize: 30
+                          });
+</script>

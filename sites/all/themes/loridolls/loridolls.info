@@ -8,6 +8,7 @@ scripts[] = nivo-slider/jquery.nivo.slider.js
 scripts[] = js/modernizr.custom.js
 scripts[] = js/jquery.gradientify.min.js
 scripts[] = js/masonry-docs.min.js
+scripts[] = js/bigtext.js
 
 stylesheets[all][] = css/nav-styles.css
 stylesheets[screen][] = nivo-slider/themes/default/default.css

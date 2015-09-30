@@ -474,6 +474,7 @@ body > #container , #containerHomepage,
 
 #containerProductPage > .row#doll-collection{
   margin-top:100px;
+  position: relative;
 }
 
 #containerProductPage .col-xs-12{
@@ -1644,13 +1645,17 @@ a.home{
 }
 
 #doll-name {
-  width:80%;  
+  width:80%;
+  /*max-height:30%;   */
   background:url('../images/name-tag.png') left top no-repeat;
   background-size: 100% 100%;
-  /*position: absolute;
-  top: -50%;
-  left: 0;*/
-  margin-top: -105px;
+  position: absolute;
+  top: -60%;
+  left: 5px;
+  /*margin-top: -39%;*/
+  text-align: center;
+  padding:5% 30% 0 25%;
+  /*height: 50px;*/
 }
 
 #doll-portrait{
@@ -1871,4 +1876,15 @@ div.html5gallery-title-text-0 {
 
 .heart {
   color: #eac473;
+}
+#doll-name span{
+  position: relative;
+
+}
+
+#doll-name span sup{
+  position: absolute;
+  display: inline-block;
+  font-size: 0.3em;
+  top:40%;
 }
