@@ -103,11 +103,11 @@
         <br />
       <?php endforeach; ?>
     </div>
-    <div class="row">
-          <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" />
-    </div>
     <div class="detail row">
       <?php foreach ($fields['faq']['value'] as $key => $value): ?>
+        <div>
+              <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/flourish.png'); ?>" />
+        </div>
         <h1><?php echo $value['faq_title'];  ?></h1>
         <?php foreach ($value['faq_arr'] as $key2 => $qa): ?>
           <?php $id = $key.'-'.$key2; ?>
