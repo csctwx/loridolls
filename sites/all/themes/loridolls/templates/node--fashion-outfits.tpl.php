@@ -59,7 +59,7 @@
 </div>
 <div id="crossSellingContainer">
   <?php if(!empty($other_products)): ?>
-    <div class="crossSellTitle"><h3>Meet my friends</h3></div>
+    <div class="crossSellTitle"><h3>More fun accessories</h3></div>
     <div class="crossSellingThumbContainer"> 
       <div class="thumbPageContainer row"> 
         <?php if(isset($other_products)): ?>

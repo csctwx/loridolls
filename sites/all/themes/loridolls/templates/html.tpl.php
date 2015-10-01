@@ -173,7 +173,7 @@
                  <!-- <div class="row">     -->   
                      <div id="copyright">
                         <div id="copyright-msg">
-                          ©<?php echo date('Y'); ?> LORI&trade;. ALL RIGHT RESERVED.
+                          ©<?php echo date('Y'); ?> LORI&trade;. ALL RIGHTS RESERVED.
                         <br />
                         <?php print l(t('CONTACT US'), '/contact-us', array('attributes' => array('class' => 'contact-us'))); ?>
                         -<?php print l(t('WHERE TO BUY'), '/where-to-buy', array('attributes' => array('class' => 'where-to-buy'))); ?>
