@@ -38,16 +38,16 @@
           <td colspan="2">Like fashion and, well, everything, Lori™ dolls, clothes and accessories are always changing. This site is our OG Lookbook. It includes many things
 OG. Some are available in stores right now. Others are from our past or our future.
 <br /><br />
-This page will help you nd stores near you that sell Lori™ things. They might not necessarily carry the exact thing you are looking for. (We suggest
-you call ahead to check.) Either way, they do carry lots of Lori™ stu we think you'll love.
+This page will help you find stores near you that sell Lori™ things. They might not necessarily carry the exact thing you are looking for. (We suggest
+you call ahead to check.) Either way, they do carry lots of Lori™ stuffs we think you'll love.
           </td>
         </tr>
-        <tr>
+        <tr  style="display:none;">
           <td colspan="2">
           <b>Country:</b>
           <Select class="CountrySelect" id="countrycode" >
             <option value="US">US</option>
-            <!-- <option value="CA">Canada</option> -->        
+            <!-- <option value="CA">Canada</option>   -->      
           </Select>
           </td>
         </tr>
@@ -62,7 +62,7 @@ you call ahead to check.) Either way, they do carry lots of Lori™ stu we thin
         </tr>
         <tr>
           <td colspan="2">
-          <div id="US" class="country" ><b>Address, City, State, and/or Zipcode:</b></div>            
+          <div id="US" class="country" ><b>CITY and STATE, and/or ZIP CODE ( e.g. Los Angeles, CA ):</b></div>            
           <div id="CA" class="country" style="display:none"><b>Address, City, Province, and/or Postal code:</b></div>
           <input type="text" id="addressInput" style="width:80%" value="">
         </td>
@@ -92,6 +92,7 @@ you call ahead to check.) Either way, they do carry lots of Lori™ stu we thin
         </td>
         </tr> 
       </table>
+      <br />
       <div id="map-container">
         <div id="sidebar">
           <ul id="sidebar-list"></ul>
