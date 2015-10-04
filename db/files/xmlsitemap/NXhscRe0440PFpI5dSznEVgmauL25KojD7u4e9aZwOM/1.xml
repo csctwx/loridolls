@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="//localhost/loridolls/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://localhost/loridolls/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://localhost/loridolls/accessories</loc></url>
+<url><loc>http://localhost/loridolls/ballerinas</loc></url>
+<url><loc>http://localhost/loridolls/dolls</loc></url>
+<url><loc>http://localhost/loridolls/fashion-accessories</loc></url>
+<url><loc>http://localhost/loridolls/fashion-dolls</loc></url>
+<url><loc>http://localhost/loridolls/fashion-outfits</loc></url>
+<url><loc>http://localhost/loridolls/games-and-downloads</loc></url>
+<url><loc>http://localhost/loridolls/pets-dolls</loc></url>
+<url><loc>http://localhost/loridolls/urban-living</loc></url>
+<url><loc>http://localhost/loridolls/video-gallery</loc></url>
+<url><loc>http://localhost/loridolls/weekend-getaway</loc></url>
+</urlset>

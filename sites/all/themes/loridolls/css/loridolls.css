@@ -1366,7 +1366,7 @@ ul#sidebar-list-2 li {
 }
 
 .theme-default .nivo-directionNav a.nivo-prevNav {  
-  left: -48px;
+  left: -45px;
   top: 40%;
   width: 47px;
   height: 88px;
@@ -1374,7 +1374,7 @@ ul#sidebar-list-2 li {
 }
 
 .theme-default .nivo-directionNav a.nivo-nextNav {  
-  right: -49px;
+  right: -47px;
   top: 40%;
   width: 47px;
   height: 88px;
@@ -1507,10 +1507,77 @@ a.home{
   background-color: transparent;
 }
 
-@media screen and (max-width: 773px){
+#doll-portrait{  
+  margin-top: -150px;
+}
+
+#containerProductPage #doll-name h2{
+  font-family:'Droid Serif', Arial, Helvetica, sans-serif;
+  font-size: 2em;  
+}
+
+ #containerProductPage #doll-name h2 sup{
+  font-size: 0.5em;  
+}
+
+
+@media screen and (max-width: 768px){
+  #productHeader{
+    text-align: center;
+  }
+
+  #productHeader img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .view-content .thumbPageContainer .grid {
     max-width: 410px;
   }
+
+  #doll-portrait{  
+    margin-top: 0;
+    float: none !important;
+  }
+
+  #doll-portrait img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #doll-name {
+    background: url("../images/name-tag.png") center no-repeat;
+    background-size: contain;
+    text-align: center;
+    padding: 20px 10px 5px;
+    margin-bottom: 20px;
+  }
+
+  .crossSellTitle h3{
+    text-align: center;
+  }
+
+  .theme-default .nivo-directionNav a.nivo-prevNav {  
+    left: 0;
+    top: 40%;
+    width: 47px;
+    height: 88px;
+    background: url(../images/lori-slideshow-rightArrow.png) no-repeat;
+  }
+
+  .theme-default .nivo-directionNav a.nivo-nextNav {  
+    right: -3px;
+    top: 40%;
+    width: 47px;
+    height: 88px;
+    background: url(../images/lori-slideshow-leftArrow.png) no-repeat;
+  }
+
+  #containerProductPage #doll-name h2{    
+    font-size: 2em;  
+  }
+
+ 
 }
 
 .mp-back::after{
@@ -1646,37 +1713,6 @@ a.home{
   margin-top:3%;
 }
 
-#doll-name {
-  width:80%;
-  /*max-height:80px;   */
-  background:url('../images/name-tag.png') left top no-repeat;
-  background-size: 100% 100%;
-  position: absolute;
-  top: -53px;
-  left: 5px;
-  margin-top: -40px;
-  text-align: center;
-  padding:5% 20% 0 17%;
-  /*height: 50px;*/
-}
-
-#doll-portrait{
-  /*position: absolute;
-  top: -50px;
-  right: 0;
-  width:45%;*/
-  margin-top: -100px;
-}
-
-
-#containerProductPage #doll-name h2{
-  font-size: 2em;
-  line-height: 2.5em;
-  width:100%;
-  padding:10% 0 5%;
-  text-align: center;
-}
-
 #doll-qa ul li {
   color:#f56e88;
 }
@@ -1810,7 +1846,7 @@ div.html5gallery-title-text-0 {
   width: 100%;
   color: white;
   /*height:60px;*/
-  /*line-height:30px;*/
+  line-height:35px;
   text-align: center;
   text-decoration: none;
   height: 40px;
@@ -1818,7 +1854,11 @@ div.html5gallery-title-text-0 {
 }
 
 .content.games-downloads .thumbMiddle .inner a:hover{
-  text-decoration: underline;
+  color: #dfdfdf;
+}
+
+.content.games-downloads .thumbMiddle .inner a:hover span{
+  text-decoration: none;
 }
 
 .content.games-downloads .thumbMiddle .inner a span{
@@ -1891,6 +1931,9 @@ div.html5gallery-title-text-0 {
   top:40%;
 }
 
-/*#container{
-  min-height: 400px;
-}*/
+.view-content.videos {
+  color: #f46db6;
+  font-size: 16px;
+  font-weight: 900;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+}

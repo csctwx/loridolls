@@ -8,10 +8,10 @@
 
 <div id="containerProductPage">
   <div class="row" id="productHeader">
-    <div class="col-xs-6 vcenter">
+    <div class="col-sm-6 col-xs-12 vcenter">
       <img class="img-responsive" src="<?php echo $fields['product_main_picture']['url'][0]['picture_url']; ?>" alt="Main Picture"/>
     </div><!-- 
- --><div class="col-xs-6 vcenter">
+ --><div class="col-sm-6 col-xs-12 vcenter">
       <div id="productTitle">
         <h2><?php echo $title; ?></h2>
       </div>

@@ -198,10 +198,16 @@ function myfunctionlib_set_breadcrumbs($category, $taxonomy){
     if($category) {
         $category_title = ucfirst(str_replace('_', ' ', $category));
         // kpr($category_title); die();
-        if($category_title=='Pets dolls') {
-            $category_title='Pets & Dolls';
+        $category_path ="";
+        if($category_title=='Dolls pets') {
+            $category_title='Dolls & Pets';
+            $category_path ="pets-dolls";
         }
-        $category_path = str_replace('_', '-', $category);
+        else {
+            $category_path = str_replace('_', '-', $category);
+        }
+        
+        // kpr($category_path); die();
         $breadcrumb[] = l($category_title, $category_path);
     }   
     // Set Breadcrumbs
@@ -236,7 +242,7 @@ function myfunctionlib_get_other_products($type, $current_nid){
         }
         $product = node_load($id); 
         $title = $product->title;
-        $product_url = $product->field_product_picture['und'][0]['uri'];        
+        $product_url = $product->field_thumbnail_picture['und'][0]['uri'];        
         $thumbnail_url = image_style_url("thumbnail", $product_url);
         $url = $base_url.'/'.drupal_get_path_alias('node/'.$id);           
         $other_products[$id] = array('title'=>$title,
@@ -244,7 +250,7 @@ function myfunctionlib_get_other_products($type, $current_nid){
                                       'url' => $url);
       }
     }
-    return $other_products;
+    return (count($other_products) == 4) ? $other_products : array();
 }
 
 function myfunctionlib_remove_width( $html ) {

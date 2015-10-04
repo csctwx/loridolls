@@ -49,6 +49,7 @@ function loridolls_preprocess_page(&$vars, $hook) {
 
   $node_type = $vars['node']->type; 
   $node_type = ($node_type == 'weekend_gateway') ? 'weekend_getaway' : $node_type;
+  $node_type = ($node_type == 'pets_dolls') ? 'dolls_pets' : $node_type;
   // kpr($node_type); die();
   if($node_type){ 
     if(in_array($node_type, $accessories_types)) {

@@ -30,19 +30,23 @@
     <?php print $title; ?>    
   <?php endif; ?>  
   <div class="view">
-   <div class="view-content videos" style="text-align:center;">      
+   <div class="view-content videos">      
       <div class="thumbPageContainer section"> 
       <div class="thumbHeader">
           <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-top.png'); ?>" />
       </div>
       <div class="thumbMiddle">
+          We will share Lori™ videos with you very soon!<br />
+          Please come back to learn more about all your friends ;)
+          <br /><br /><br /><br /><br />
          <?php if ($rows): ?>
-            <!-- A wrapper DIV to center the Gallery -->
+            <!-- A wrapper DIV to display the Gallery -->
                
-                <div style="display:none;margin:0 auto;" class="html5gallery" data-skin="mediapage" data-width="800" data-height="450" data-resizemode="fill" >
-                <!-- data-autoplayvideo="false"  data-playvideoonclick="false" -->
-                  <?php print $rows; ?>
-                </div>      
+                <!-- <div style="display:none;margin:0 auto;" class="html5gallery" data-skin="mediapage" data-width="800" data-height="450" data-resizemode="fill" >
+                
+                  <?php //print $rows; ?>
+                 
+                </div>       -->
               
           <?php endif; ?>  
           <?php if ($pager): ?>

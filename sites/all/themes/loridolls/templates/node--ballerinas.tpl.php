@@ -7,10 +7,10 @@
 
 <div id="containerProductPage">
   <div class="row" id="productHeader">
-    <div class="col-xs-6 vcenter">
+    <div class="col-sm-6 col-xs-12 vcenter">
       <img class="img-responsive" src="<?php echo $fields['product_main_picture']['url'][0]['picture_url']; ?>" alt="Main Picture"/>
     </div><!-- 
- --><div class="col-xs-6 vcenter">
+ --><div class="col-sm-6 col-xs-12 vcenter">
       <div id="productTitle">
         <h2><?php echo $title; ?></h2>
       </div>
@@ -26,12 +26,13 @@
         <?php foreach ($fields['store_link']['value'] as $item): ?>
             <?php $store_link = field_collection_field_get_entity($item); ?> 
             <a href="<?php echo $store_link->field_store_link_url['und']['0']['value'] ?>" target="_blank">
+            <?php //echo $store_link->field_store_link_name['und']['0']['value'] ?>
             <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/target.png'); ?>" />
             </a>
         <?php endforeach; ?>
       </div>
     </div>
-  </div>
+  </div>  
   <div class="row" id="productDetail">
     <div class="col-xs-12">
       <div class="slider-wrapper theme-default slideshowWide">
@@ -48,32 +49,26 @@
     $doll = field_collection_field_get_entity($fields['doll']['value'][0]); 
     $doll_name = $doll->field_doll_name['und'][0]['value'];
     $doll_portrait_url = file_create_url($doll->field_doll_portrait['und'][0]['uri']);
-  ?> 
+  ?>
     <div class="col-xs-12">
-      <div class="row">
-        <div class="col-xs-6">
-          <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
-          <div id="doll-qa">
-            <?php $doll_qas = $doll->field_doll_qa['und']; ?>
-            <ul>
-              <?php foreach ($doll_qas as $item): ?>
-                <?php 
-                  $qa = field_collection_field_get_entity($item); 
-                  $qa_question = $qa->field_doll_qa_question['und'][0]['value'];
-                  $qa_answer = $qa->field_doll_qa_answer['und'][0]['value'];
-                ?> 
-                <li><h3><span class="heart">&#10084</span> <?php echo $qa_question; ?></h3><?php echo $qa_answer; ?></li>
-              <?php endforeach; ?> 
-            </ul>
-          </div>
-        </div>   
-        <div class="col-xs-6">
-          <div id="doll-portrait">
-            <img class="img-responsive" src="<?php echo $doll_portrait_url;  ?>" alt="Doll Portrait" />
-          </div>
-        </div> 
+      <div id="doll-name"><h2><?php echo $doll_name;  ?></h2></div>
+      <div class="pull-right" id="doll-portrait">
+        <img class="img-responsive" src="<?php echo $doll_portrait_url;  ?>" alt="Doll Portrait" />
       </div>
-    </div> 
+      <div id="doll-qa">
+        <?php $doll_qas = $doll->field_doll_qa['und']; ?>
+        <ul>
+          <?php foreach ($doll_qas as $item): ?>
+            <?php 
+              $qa = field_collection_field_get_entity($item); 
+              $qa_question = $qa->field_doll_qa_question['und'][0]['value'];
+              $qa_answer = $qa->field_doll_qa_answer['und'][0]['value'];
+            ?> 
+            <li><h3><span class="heart">&#10084</span> <?php echo $qa_question; ?></h3><?php echo $qa_answer; ?></li>
+          <?php endforeach; ?> 
+        </ul>
+      </div>
+    </div>          
   </div> 
 </div>
 <div id="crossSellingContainer">
@@ -105,3 +100,8 @@
     </div>
   <?php endif; ?>
 </div>
+<script type="text/javascript"> 
+  $("#doll-name").bigtext({
+                              //minfontsize: 30
+                          });
+</script>

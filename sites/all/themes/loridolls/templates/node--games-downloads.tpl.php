@@ -99,7 +99,7 @@
           foreach ($coloring_sheets as $coloring_sheet) {
             $size = $coloring_sheet['picture_size'];
             $image = "<img src='".$coloring_sheet['picture_url']."' alt='Coloring Sheet' />";           
-            $pdf = "<a href='".$coloring_sheet['pdf_url']."' target='_blank'><span class='glyphicon glyphicon-download-alt'>&#160;Download PDF File</span></a>";
+            $pdf = "<a href='".$coloring_sheet['pdf_url']."' target='_blank'><span class='glyphicon glyphicon-download-alt'>&#160;</span>Download PDF File</a>";
             if($size == 3){
               print "<div class='grid-item  grid-item--width2 grid-item--height2'>".$image.$pdf."</div>";
             }
