@@ -898,7 +898,8 @@ body.node-type-wild-animals #container {
   margin:0 auto;
 }
 
-.view-content .thumbPageContainer .grid{
+.view-content .thumbPageContainer .grid,
+.content.games-downloads .grid {
   max-width: 830px;
   margin: 0 auto;
 }
@@ -1423,8 +1424,24 @@ a.home{
 }
 
 @media screen and (max-width: 1102px){
-  .view-content .thumbPageContainer .grid {
+  .view-content .thumbPageContainer .grid,
+  .content.games-downloads .grid,
+  .content.games-downloads h2 {
     max-width: 620px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 773px){
+  .view-content .thumbPageContainer .grid,
+  .content.games-downloads .grid,
+  .content.games-downloads h2 {
+    max-width: 410px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1798,7 +1815,7 @@ div.html5gallery-title-text-0 {
 .content.page .thumbMiddle {
   background: url('../images/product-page-contentBox-middle.png') top left repeat-y;
   background-size: contain;
-  padding: 0 5% 2% 5%;
+  padding: 0 3% 2% 3%;
   color: #b2469a;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
