@@ -1725,6 +1725,10 @@ a.home{
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
+#containerProductPage ul li a{
+  color:#b2469a;
+}
+
 #containerProductPage h2{
   font-size: 24px;
   margin-bottom: 2%;

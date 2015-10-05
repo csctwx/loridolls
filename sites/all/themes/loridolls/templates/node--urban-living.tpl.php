@@ -21,13 +21,16 @@
         <?php echo $fields['contents']['value']; ?>
       </div>
       <br />
-      <?php if(!empty($fields['features']['value'])): ?>
-        <div id="features:">
+      <?php if(!empty($fields['features']['value'])||!empty($fields['instructions_sheet']['value'])): ?>
+      <div id="features">
         <b>features:</b>
         <ul>
         <?php foreach ($fields['features']['value'] as $feature) : ?>
           <li><?php echo $feature['value']; ?></li>
-        <?php endforeach; ?>       
+        <?php endforeach; ?>  
+        <?php if(!empty($fields['instructions_sheet']['value'])): ?>
+          <li><a href="<?php echo $fields['instructions_sheet']['url'][0]['picture_url']; ?>" target="_blank">Download instructions sheet</a></li>
+        <?php endif; ?>
         </ul>
       </div>
       <?php endif; ?>
