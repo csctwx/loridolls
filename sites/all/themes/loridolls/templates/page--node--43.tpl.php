@@ -72,7 +72,7 @@ you call ahead to check.) Either way, they do carry lots of Lori™ stuffs we th
           <div id="searchbar">
               <div id="search-location"> 
               
-                <b>Radius:</b>
+                <b>RADIUS:</b>
                 <select name="radiusSelect" id="radiusSelect">
                   <option value="1">1 mile</option>
                   <option value="5">5 miles</option>

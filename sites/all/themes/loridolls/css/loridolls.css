@@ -1083,7 +1083,7 @@ table.thumbPageContainer > tbody > tr:first-of-type > td {
 
 
 table.thumbPageContainer td b{
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   color:#b2469a;
   font-weight: bold;
 }

@@ -22,7 +22,7 @@
       </div>
       <br /> 
       <?php if(!empty($fields['features']['value'])||!empty($fields['instructions_sheet']['value'])): ?>
-        <div id="features">
+      <div id="features">
         <b>features:</b>
         <ul>
         <?php foreach ($fields['features']['value'] as $feature) : ?>
