@@ -1931,7 +1931,7 @@ div.html5gallery-title-text-0 {
 .content.faq .detail .qa a{
   display: block;
   position: absolute;
-  top: -150px;
+  top: 0px;
   text-decoration: none;
 }
 
