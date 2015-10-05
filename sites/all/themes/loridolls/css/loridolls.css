@@ -1563,10 +1563,10 @@ a.home{
   }
 
   #doll-name {
-    background: url("../images/name-tag.png") center no-repeat;
-    background-size: contain;
+    /*background: url("../images/name-tag.png") center no-repeat;*/
+    /*background-size: contain;*/
     text-align: center;
-    padding: 20px 10px 5px;
+    /*padding: 20px 10px 5px;*/
     margin-bottom: 20px;
   }
 
@@ -1672,16 +1672,26 @@ a.home{
 
 
 @media screen and (max-width: 520px){
-  .grid-item, 
-  .grid-item--width2 { 
+  .grid-item.grid-item--width2,
+  .content.games-downloads h2 { 
     max-width: 90%;
     margin-left:5%;
     height: auto; 
   }
+
+  .grid-item{ 
+    max-width: 42.5%;  
+    margin-left:5%;
+    height: auto; 
+    position: relative !important; 
+    display: inline-block;
+    top: 0 !important;
+  }
   
+  .grid.js-masonry,
   .grid-item, 
   .grid-item--height2 {
-    height: auto; 
+    height: auto !important; 
   }
 }
 
