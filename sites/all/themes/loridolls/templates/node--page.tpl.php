@@ -93,13 +93,6 @@
       <img class="img-responsive" src="<?php echo myfunctionlib_theme_path('images/product-page-contentBox-bottom.png'); ?>" />
   </div>
 </div>
-<script type="text/javascript">
-  $(function(){
-    var min_height = $('html').height()-394;
-    var min_height_str = min_height + "px";
-    $('#container').css('min-height',min_height_str);
-    // alert(min_height);
-  });
-</script>
+
 
  
